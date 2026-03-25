@@ -22,6 +22,7 @@ public class BooksTest extends BaseBooksTest {
     @Test(groups = { "Books", "Smoke", "Regression" })
     public void validarStatusCode200Books() {
         given()
+                .spec(spec)
                 .header("Content-Type", "application/json")
                 .when()
                 .get("/books")
@@ -38,6 +39,7 @@ public class BooksTest extends BaseBooksTest {
     @Test(groups = { "Books", "Performance" })
     public void validarTiempoDeRespuesta() {
         given()
+                .spec(spec)
                 .header("Content-Type", "application/json")
                 .when()
                 .get("/books")
@@ -81,6 +83,7 @@ public class BooksTest extends BaseBooksTest {
     @Test(dataProvider = "librosValidos", groups = { "Books", "Regression" })
     public void validarLibroPorId(int bookId) {
         given()
+                .spec(spec)
                 .header("Content-Type", "application/json")
                 .when()
                 .get("/books/" + bookId)
@@ -97,6 +100,7 @@ public class BooksTest extends BaseBooksTest {
     @Test(groups = { "Books", "Negative" })
     public void validarStatusCode404LibroNoExiste() {
         given()
+                .spec(spec)
                 .header("Content-Type", "application/json")
                 .when()
                 .get("/books/999")

@@ -25,6 +25,7 @@ public class IdempotenciaTest extends BaseBooksTest {
                 String cuerpoActualizacion = "{\"customerName\": \"Nuevo Nombre\"}";
 
                 Response primerPATCH = given()
+                                .spec(spec)
                                 .header("Content-Type", "application/json")
                                 .header("Authorization", "Bearer " + token)
                                 .body(cuerpoActualizacion)
@@ -37,6 +38,7 @@ public class IdempotenciaTest extends BaseBooksTest {
 
                 // Segunda actualización
                 Response segundoPATCH = given()
+                                .spec(spec)
                                 .header("Content-Type", "application/json")
                                 .header("Authorization", "Bearer " + token)
                                 .body(cuerpoActualizacion)
@@ -63,6 +65,7 @@ public class IdempotenciaTest extends BaseBooksTest {
                 System.out.println("Order creada para DELETE: " + orderId);
 
                 Response primerDelete = given()
+                                .spec(spec)
                                 .header("Authorization", "Bearer " + token)
                                 .when()
                                 .delete("/orders/" + orderId)
@@ -72,6 +75,7 @@ public class IdempotenciaTest extends BaseBooksTest {
                                 .extract().response();
 
                 Response segundoDelete = given()
+                                .spec(spec)
                                 .header("Authorization", "Bearer " + token)
                                 .when()
                                 .delete("/orders/" + orderId)
@@ -90,6 +94,7 @@ public class IdempotenciaTest extends BaseBooksTest {
                 String cuerpoOrden = "{\"bookId\": 1, \"customerName\": \"Enoc\"}";
 
                 return given()
+                                .spec(spec)
                                 .header("Content-Type", "application/json")
                                 .header("Authorization", "Bearer " + token)
                                 .body(cuerpoOrden)

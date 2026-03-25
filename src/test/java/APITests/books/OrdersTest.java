@@ -22,6 +22,7 @@ public class OrdersTest extends BaseBooksTest {
     @Test(groups = { "Orders", "Smoke", "Regression" })
     public void listarOrdenes() {
         given()
+                .spec(spec)
                 .header("Authorization", "Bearer " + token)
                 .when()
                 .get("/orders")
@@ -39,6 +40,7 @@ public class OrdersTest extends BaseBooksTest {
         Order nuevaOrden = new Order(1, "jhon");
 
         OrderResponse respuesta = given()
+                .spec(spec)
                 .header("Authorization", "Bearer " + token)
                 .contentType("application/json")
                 .body(nuevaOrden)
@@ -59,7 +61,8 @@ public class OrdersTest extends BaseBooksTest {
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Orders", "Negative" })
     public void validarStatusCode400CuandoCuerpoEsInvalido() {
-        given()
+        given() 
+                .spec(spec)
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
                 .body("{}")
@@ -81,6 +84,7 @@ public class OrdersTest extends BaseBooksTest {
         String cuerpoSolicitud = "{\"clientName\": \"Postman\", \"clientEmail\": \"" + randomEmail + "\"}";
 
         given()
+                .spec(spec)
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer InvalidoToken")
                 .body(cuerpoSolicitud)
@@ -108,6 +112,7 @@ public class OrdersTest extends BaseBooksTest {
     @Test(dataProvider = "tokensInvalidos", groups = { "Orders", "Security", "Negative" })
     public void validarTokensInvalidosEnGet(String tokenInvalido, int statusEsperado) {
         given()
+                .spec(spec)
                 .header("Authorization", "Bearer " + tokenInvalido)
                 .when()
                 .get("/orders")

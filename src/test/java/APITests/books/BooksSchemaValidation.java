@@ -22,6 +22,7 @@ public class BooksSchemaValidation extends BaseBooksTest {
         Allure.getLifecycle().updateTestCase(tc -> tc.setName("El esquema del endpoint /books es el correcto"));
 
         given()
+                .spec(spec)
                 .header("Content-Type", "application/json")
                 .when()
                 .get("/books")

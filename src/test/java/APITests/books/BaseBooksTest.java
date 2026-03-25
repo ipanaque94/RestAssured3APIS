@@ -6,7 +6,6 @@ import java.util.Random;
 
 import org.testng.annotations.BeforeClass;
 
-import APITests.utils.Config;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
@@ -39,6 +38,7 @@ public class BaseBooksTest {
         String email = generateRandomEmail();
         return given()
 
+                .spec(spec)
                 .contentType("application/json")
                 .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + email + "\"}")
                 .when()

@@ -7,6 +7,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.specification.RequestSpecification;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -16,6 +17,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class RickAndMortyTest {
+    protected static RequestSpecification spec;
 
     @BeforeClass
     public void setup() {
@@ -26,11 +28,9 @@ public class RickAndMortyTest {
 
         RestAssured.baseURI = APITests.utils.Config.get("rick.api.url");
         RestAssured.useRelaxedHTTPSValidation();
-        RestAssured.requestSpecification = new RequestSpecBuilder()
-                .addHeader("User-Agent",
-                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+        spec = new RequestSpecBuilder()
+                .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
                 .addHeader("Accept", "application/json")
-                .addHeader("Accept-Language", "en-US,en;q=0.9")
                 .build();
     }
 
