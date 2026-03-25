@@ -24,15 +24,11 @@ jobs:
       - name: Dar permisos a gradlew
         run: chmod +x gradlew
 
-      - name: Verificar conectividad a APIs
-        run: |
-          curl -s -o /dev/null -w "%{http_code}" https://simple-books-api.click/books
-          curl -s -o /dev/null -w "%{http_code}" https://rickandmortyapi.com/api/character/1
-          curl -s -o /dev/null -w "%{http_code}" https://jsonplaceholder.typicode.com/posts/1
-
       - name: Ejecutar tests
         run: ./gradlew test
-        continue-on-error: true
+        env:
+          JAVA_OPTS: "-Djava.net.useSystemProxies=false"
+          _JAVA_OPTIONS: "-Djava.net.useSystemProxies=false -Dhttp.proxyHost= -Dhttp.proxyPort= -Dhttps.proxyHost= -Dhttps.proxyPort= -DsocksProxyHost="
 
       - name: Generar reporte Allure
         if: always()
