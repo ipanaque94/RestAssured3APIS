@@ -25,7 +25,7 @@ public class JsonPlaceholderTest {
                         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
                 .addHeader("Accept", "application/json")
                 .build();
-         }
+    }
 
     @Severity(SeverityLevel.BLOCKER)
     @Description("GET /posts/1 debe retornar 200, userId=1 y title no nulo")
@@ -34,7 +34,7 @@ public class JsonPlaceholderTest {
     @Test(groups = { "JsonPlaceholder", "Smoke" })
     public void testGetPost() {
         given()
-                .header("User-Agent", "Mozilla/5.0")
+                
                 .header("Content-Type", "application/json")
                 .when()
                 .get("/posts/1")

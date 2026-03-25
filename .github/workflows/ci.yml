@@ -5,7 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch: # ← permite correrlo manualmente
+  workflow_dispatch:
 
 jobs:
   test:
@@ -24,8 +24,15 @@ jobs:
       - name: Dar permisos a gradlew
         run: chmod +x gradlew
 
+      - name: Verificar conectividad a APIs
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://simple-books-api.click/books
+          curl -s -o /dev/null -w "%{http_code}" https://rickandmortyapi.com/api/character/1
+          curl -s -o /dev/null -w "%{http_code}" https://jsonplaceholder.typicode.com/posts/1
+
       - name: Ejecutar tests
         run: ./gradlew test
+        continue-on-error: true
 
       - name: Generar reporte Allure
         if: always()

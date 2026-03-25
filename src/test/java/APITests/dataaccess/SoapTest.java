@@ -44,7 +44,7 @@ public class SoapTest {
                 """;
 
         given()
-                .header("User-Agent", "Mozilla/5.0")
+
                 .header("Content-Type", "text/xml; charset=utf-8")
                 .header("SOAPAction", "")
                 .body(soapBody)

@@ -38,7 +38,7 @@ public class RickAndMortyTest {
     @Test(groups = { "RickAndMorty", "Smoke" })
     public void testGetPersonajeRick() {
         given()
-                .header("User-Agent", "Mozilla/5.0")
+
                 .when()
                 .get("/character/1")
                 .then()
@@ -56,7 +56,6 @@ public class RickAndMortyTest {
     @Test(groups = { "RickAndMorty", "Regression" })
     public void testValidarCamposAnidadosConJsonPath() {
         given()
-                .header("User-Agent", "Mozilla/5.0")
                 .when()
                 .get("/character/1")
                 .then()

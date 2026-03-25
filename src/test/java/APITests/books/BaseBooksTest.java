@@ -35,8 +35,7 @@ public class BaseBooksTest {
     protected String obtenerToken() {
         String email = generateRandomEmail();
         return given()
-                // ← Agrega User-Agent
-                .header("User-Agent", "Mozilla/5.0")
+
                 .contentType("application/json")
                 .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + email + "\"}")
                 .when()
