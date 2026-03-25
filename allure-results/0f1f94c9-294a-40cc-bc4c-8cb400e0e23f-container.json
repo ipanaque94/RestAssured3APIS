@@ -1,0 +1,1 @@
+{"uuid":"0f1f94c9-294a-40cc-bc4c-8cb400e0e23f","name":"APITests.auth.AuthTest","children":["7a93e4b2-4993-46c7-a9c3-b21ad9ce17ce"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1774462622493,"stop":1774462623084}],"afters":[],"start":1774462622431,"stop":1774462626069}

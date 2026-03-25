@@ -1,0 +1,150 @@
+HTTP/1.1 403 Forbidden
+Server: Jetty(12.0.25)
+%Date: Wed, 25 Mar 2026 19:31:06 GMT
+Vary: Accept-Encoding
+!X-Content-Type-Options: nosniff
+hSet-Cookie: JSESSIONID.707d7ae8=node0yyp5ij8wh4oqdt9fyfryis3a175.node0; Path=/; HttpOnly; SameSite=Lax
+(Expires: Thu, 01 Jan 1970 00:00:00 GMT
+'Content-Type: text/html;charset=utf-8
+X-Hudson: 1.395
+X-Jenkins: 2.528.3
+X-Jenkins-Session: 0ba33bab
+Transfer-Encoding: chunked
+
+<html>
+	  <head>
+F    <meta http-equiv="refresh" content="1;url=/login?from=%2Fbooks"/>
+p    <script id="redirect" data-redirect-url="/login?from=%2Fbooks" src="/static/0ba33bab/scripts/redirect.js"/>
+
+  </head>
+6  <body style="background-color:white; color:white;">
+Authentication required
+
+
+</body>
+	</html>
+HTTP/1.1 403 Forbidden
+Server: Jetty(12.0.25)
+%Date: Wed, 25 Mar 2026 19:31:07 GMT
+Vary: Accept-Encoding
+!X-Content-Type-Options: nosniff
+iSet-Cookie: JSESSIONID.707d7ae8=node017nc5z5ftrzei9ee0ft55j6go177.node0; Path=/; HttpOnly; SameSite=Lax
+(Expires: Thu, 01 Jan 1970 00:00:00 GMT
+'Content-Type: text/html;charset=utf-8
+X-Hudson: 1.395
+X-Jenkins: 2.528.3
+X-Jenkins-Session: 0ba33bab
+Transfer-Encoding: chunked
+
+<html>
+	  <head>
+F    <meta http-equiv="refresh" content="1;url=/login?from=%2Fbooks"/>
+p    <script id="redirect" data-redirect-url="/login?from=%2Fbooks" src="/static/0ba33bab/scripts/redirect.js"/>
+
+  </head>
+6  <body style="background-color:white; color:white;">
+Authentication required
+
+
+</body>
+	</html>
+HTTP/1.1 403 Forbidden
+Server: Jetty(12.0.25)
+%Date: Wed, 25 Mar 2026 19:31:07 GMT
+Vary: Accept-Encoding
+!X-Content-Type-Options: nosniff
+iSet-Cookie: JSESSIONID.707d7ae8=node0rkexy3r3203t16zen177ombd8184.node0; Path=/; HttpOnly; SameSite=Lax
+(Expires: Thu, 01 Jan 1970 00:00:00 GMT
+'Content-Type: text/html;charset=utf-8
+X-Hudson: 1.395
+X-Jenkins: 2.528.3
+X-Jenkins-Session: 0ba33bab
+Transfer-Encoding: chunked
+
+<html>
+	  <head>
+F    <meta http-equiv="refresh" content="1;url=/login?from=%2Fbooks"/>
+p    <script id="redirect" data-redirect-url="/login?from=%2Fbooks" src="/static/0ba33bab/scripts/redirect.js"/>
+
+  </head>
+6  <body style="background-color:white; color:white;">
+Authentication required
+
+
+</body>
+	</html>
+HTTP/1.1 403 Forbidden
+Server: Jetty(12.0.25)
+%Date: Wed, 25 Mar 2026 19:31:09 GMT
+Vary: Accept-Encoding
+!X-Content-Type-Options: nosniff
+jSet-Cookie: JSESSIONID.707d7ae8=node01j7l2mfdod1kb1chg5ww0n3dnu186.node0; Path=/; HttpOnly; SameSite=Lax
+(Expires: Thu, 01 Jan 1970 00:00:00 GMT
+'Content-Type: text/html;charset=utf-8
+X-Hudson: 1.395
+X-Jenkins: 2.528.3
+X-Jenkins-Session: 0ba33bab
+Transfer-Encoding: chunked
+
+<html>
+	  <head>
+F    <meta http-equiv="refresh" content="1;url=/login?from=%2Fbooks"/>
+p    <script id="redirect" data-redirect-url="/login?from=%2Fbooks" src="/static/0ba33bab/scripts/redirect.js"/>
+
+  </head>
+6  <body style="background-color:white; color:white;">
+Authentication required
+
+
+</body>
+	</html>
+HTTP/1.1 403 Forbidden
+Server: Jetty(12.0.25)
+%Date: Wed, 25 Mar 2026 19:31:09 GMT
+Vary: Accept-Encoding
+!X-Content-Type-Options: nosniff
+iSet-Cookie: JSESSIONID.707d7ae8=node0ur1ih50uea8v1hrdeh7dq6rg6191.node0; Path=/; HttpOnly; SameSite=Lax
+(Expires: Thu, 01 Jan 1970 00:00:00 GMT
+'Content-Type: text/html;charset=utf-8
+X-Hudson: 1.395
+X-Jenkins: 2.528.3
+X-Jenkins-Session: 0ba33bab
+Transfer-Encoding: chunked
+
+<html>
+	  <head>
+F    <meta http-equiv="refresh" content="1;url=/login?from=%2Fbooks"/>
+p    <script id="redirect" data-redirect-url="/login?from=%2Fbooks" src="/static/0ba33bab/scripts/redirect.js"/>
+
+  </head>
+6  <body style="background-color:white; color:white;">
+Authentication required
+
+
+</body>
+	</html>
+&HTTP/1.1 403 Forbidden
+&Server: Jetty(12.0.25)
+&%Date: Wed, 25 Mar 2026 19:31:09 GMT
+&Vary: Accept-Encoding
+&!X-Content-Type-Options: nosniff
+&jSet-Cookie: JSESSIONID.707d7ae8=node01um6wi3dlb3ou1pv2380hmg0zd195.node0; Path=/; HttpOnly; SameSite=Lax
+&(Expires: Thu, 01 Jan 1970 00:00:00 GMT
+&'Content-Type: text/html;charset=utf-8
+&X-Hudson: 1.395
+&X-Jenkins: 2.528.3
+&X-Jenkins-Session: 0ba33bab
+&Transfer-Encoding: chunked
+&
+&<html>
+&	  <head>
+&L    <meta http-equiv="refresh" content="1;url=/login?from=%2Fbooks%2F999"/>
+&v    <script id="redirect" data-redirect-url="/login?from=%2Fbooks%2F999" src="/static/0ba33bab/scripts/redirect.js"/>
+&
+  </head>
+&6  <body style="background-color:white; color:white;">
+&Authentication required
+&
+&
+&</body>
+&	</html>

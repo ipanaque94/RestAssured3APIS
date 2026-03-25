@@ -1,0 +1,106 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite API Books" verbose="1" parallel="none">
+
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="APITests.auth.AuthTest"/>
+            <class name="APITests.books.BooksTest"/>
+            <class name="APITests.books.OrdersTest"/>
+            <class name="APITests.books.BooksSchemaValidation"/>
+            <class name="APITests.rickandmorty.RickAndMortyTest"/>
+            <class name="APITests.jsonplaceholder.JsonPlaceholderTest"/>
+            <class name="APITests.dataaccess.SoapTest"/>
+        </classes>
+    </test>
+
+    <test name="Regression Tests">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="APITests.books.BooksTest"/>
+            <class name="APITests.books.OrdersTest"/>
+            <class name="APITests.books.IdempotenciaTest"/>
+            <class name="APITests.books.BooksSchemaValidation"/>
+            <class name="APITests.rickandmorty.RickAndMortyTest"/>
+            <class name="APITests.jsonplaceholder.JsonPlaceholderTest"/>
+        </classes>
+    </test>
+
+    <test name="Contract Tests">
+        <groups>
+            <run>
+                <include name="Contract"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="APITests.books.BooksSchemaValidation"/>
+        </classes>
+    </test>
+
+    <test name="Security Tests">
+        <groups>
+            <run>
+                <include name="Security"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="APITests.auth.AuthTest"/>
+            <class name="APITests.books.OrdersTest"/>
+        </classes>
+    </test>
+
+    <test name="Negative Tests">
+        <groups>
+            <run>
+                <include name="Negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="APITests.auth.AuthTest"/>
+            <class name="APITests.books.BooksTest"/>
+            <class name="APITests.books.OrdersTest"/>
+        </classes>
+    </test>
+
+    <test name="Idempotencia Tests">
+        <groups>
+            <run>
+                <include name="Idempotencia"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="APITests.books.IdempotenciaTest"/>
+        </classes>
+    </test>
+
+    <test name="Performance Tests">
+        <groups>
+            <run>
+                <include name="Performance"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="APITests.books.BooksTest"/>
+        </classes>
+    </test>
+
+    <test name="SOAP Tests">
+        <groups>
+            <run>
+                <include name="SOAP"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="APITests.dataaccess.SoapTest"/>
+        </classes>
+    </test>
+
+</suite>
