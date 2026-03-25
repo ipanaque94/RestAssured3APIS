@@ -24,6 +24,15 @@ jobs:
       - name: Dar permisos a gradlew
         run: chmod +x gradlew
 
+      - name: Test conectividad
+        run: |
+          echo "=== Probando conectividad ==="
+          curl -s -o /dev/null -w "simple-books: %{http_code}\n" https://simple-books-api.click/books || echo "FALLO"
+          curl -s -o /dev/null -w "rickandmorty: %{http_code}\n" https://rickandmortyapi.com/api/character/1 || echo "FALLO"
+          curl -s -o /dev/null -w "jsonplaceholder: %{http_code}\n" https://jsonplaceholder.typicode.com/posts/1 || echo "FALLO"
+          echo "=== Variables proxy ==="
+          env | grep -i proxy || echo "Sin proxy"
+
       - name: Ejecutar tests
         run: |
           ./gradlew test \
