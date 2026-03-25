@@ -18,7 +18,10 @@ public class SoapTest {
 
     @BeforeClass
     public void setup() {
-        RestAssured.baseURI = "https://www.dataaccess.com";
+        System.setProperty("java.net.useSystemProxies", "false");
+        System.setProperty("socksProxyHost", "");
+        System.setProperty("https.protocols", "TLSv1.2,TLSv1.3");
+        RestAssured.baseURI = APITests.utils.Config.get("soap.api.url");
         RestAssured.useRelaxedHTTPSValidation();
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .addHeader("User-Agent",

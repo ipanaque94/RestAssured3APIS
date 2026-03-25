@@ -18,7 +18,10 @@ public class BaseBooksTest {
 
     @BeforeClass
     public void setup() {
-        RestAssured.baseURI = Config.get("books.api.url");
+        System.setProperty("java.net.useSystemProxies", "false");
+        System.setProperty("socksProxyHost", "");
+        System.setProperty("https.protocols", "TLSv1.2,TLSv1.3");
+        RestAssured.baseURI = APITests.utils.Config.get("books.api.url");
         RestAssured.useRelaxedHTTPSValidation();
 
         spec = new RequestSpecBuilder()

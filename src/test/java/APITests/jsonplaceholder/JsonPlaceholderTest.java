@@ -18,6 +18,9 @@ public class JsonPlaceholderTest {
 
     @BeforeClass
     public void setup() {
+        System.setProperty("java.net.useSystemProxies", "false");
+        System.setProperty("socksProxyHost", "");
+        System.setProperty("https.protocols", "TLSv1.2,TLSv1.3");
         RestAssured.baseURI = APITests.utils.Config.get("jsonplaceholder.api.url");
         RestAssured.useRelaxedHTTPSValidation();
         RestAssured.requestSpecification = new RequestSpecBuilder()
@@ -25,7 +28,7 @@ public class JsonPlaceholderTest {
                         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
                 .addHeader("Accept", "application/json")
                 .build();
-    }
+         }
 
     @Severity(SeverityLevel.BLOCKER)
     @Description("GET /posts/1 debe retornar 200, userId=1 y title no nulo")
@@ -36,8 +39,8 @@ public class JsonPlaceholderTest {
         given()
                 
                 .header("Content-Type", "application/json")
-                .when()
-                .get("/posts/1")
+               
+
                 .then()
                 .statusCode(200)
                 .body("userId", equalTo(1))

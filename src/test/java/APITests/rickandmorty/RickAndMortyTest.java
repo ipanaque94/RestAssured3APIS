@@ -11,8 +11,6 @@ import io.restassured.builder.RequestSpecBuilder;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import APITests.utils.Config;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
@@ -21,7 +19,12 @@ public class RickAndMortyTest {
 
     @BeforeClass
     public void setup() {
-        RestAssured.baseURI = Config.get("rick.api.url");
+
+        System.setProperty("java.net.useSystemProxies", "false");
+        System.setProperty("socksProxyHost", "");
+        System.setProperty("https.protocols", "TLSv1.2,TLSv1.3");
+
+        RestAssured.baseURI = APITests.utils.Config.get("rick.api.url");
         RestAssured.useRelaxedHTTPSValidation();
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .addHeader("User-Agent",
