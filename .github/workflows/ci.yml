@@ -25,10 +25,14 @@ jobs:
         run: chmod +x gradlew
 
       - name: Ejecutar tests
-        run: ./gradlew test
-        env:
-          JAVA_OPTS: "-Djava.net.useSystemProxies=false"
-          _JAVA_OPTIONS: "-Djava.net.useSystemProxies=false -Dhttp.proxyHost= -Dhttp.proxyPort= -Dhttps.proxyHost= -Dhttps.proxyPort= -DsocksProxyHost="
+        run: |
+          ./gradlew test \
+            -Djava.net.useSystemProxies=false \
+            -DsocksProxyHost="" \
+            -DsocksProxyPort="" \
+            -Dhttp.proxyHost="" \
+            -Dhttps.proxyHost="" \
+            -Dhttp.nonProxyHosts="*"
 
       - name: Generar reporte Allure
         if: always()
