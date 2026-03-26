@@ -1,7 +1,7 @@
 package APITests.books;
 
 import static io.restassured.RestAssured.given;
-import java.util.Random;
+//import java.util.Random;
 import org.testng.annotations.BeforeClass;
 import APITests.utils.Config;
 import io.restassured.RestAssured;
@@ -12,32 +12,45 @@ public class BaseBooksTest {
 
     protected String token;
 
-    protected static RequestSpecification spec = new RequestSpecBuilder()
-            .addHeader("Content-Type", "application/json")
-            .addHeader("Accept", "application/json")
-            .build();
+    protected RequestSpecification spec;
 
     @BeforeClass
     public void setup() {
         RestAssured.baseURI = Config.get("books.api.url");
+        // RestAssured.port = 443;
         RestAssured.useRelaxedHTTPSValidation();
+
+        spec = new RequestSpecBuilder()
+                .addHeader("Content-Type", "application/json")
+                .addHeader("Accept", "application/json")
+                .build();
+
         token = obtenerToken();
     }
 
+    //
     protected String obtenerToken() {
-        String email = generateRandomEmail();
-        return given()
-                .spec(spec)
-                .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + email + "\"}")
-                .when()
-                .post("/api-clients")
-                .then()
-                .statusCode(201)
-                .extract()
-                .path("accessToken");
+        for (int i = 0; i < 3; i++) {
+            String email = generateRandomEmail();
+
+            var response = given()
+                    .spec(spec)
+                    .log().uri()
+                    .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + email + "\"}")
+                    .when()
+                    .post("/api-clients");
+            System.out.println("Respuesta: " + response.asString());
+
+            if (response.statusCode() == 201) {
+                return response.path("accessToken");
+            } else {
+                System.out.println("Intento " + (i + 1) + " falló con status: " + response.statusCode());
+            }
+        }
+        throw new RuntimeException("No se pudo obtener token después de varios intentos");
     }
 
     protected String generateRandomEmail() {
-        return "user" + new Random().nextInt(999999) + "@example.com";
+        return "user" + System.currentTimeMillis() + "@mail.com";
     }
 }

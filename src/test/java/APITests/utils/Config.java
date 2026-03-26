@@ -9,13 +9,21 @@ public class Config {
 
     static {
         try (InputStream input = Config.class.getClassLoader().getResourceAsStream("config.properties")) {
-            props.load(input);
+            if (input != null) {
+                props.load(input);
+            }
         } catch (IOException e) {
-            throw new RuntimeException("No se pudo cargar configuración", e);
+            throw new RuntimeException("No se pudo cargar configuración local", e);
         }
     }
 
     public static String get(String key) {
+        // 1. Primero intenta leer de system properties (CI/CD)
+        String value = System.getProperty(key);
+        if (value != null && !value.isEmpty()) {
+            return value;
+        }
+        // 2. Si no existe, usa config.properties (local)
         return props.getProperty(key);
     }
 }

@@ -10,6 +10,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    environment: QA
 
     steps:
       - name: Checkout código
@@ -36,6 +37,10 @@ jobs:
       - name: Ejecutar tests
         run: |
           ./gradlew test \
+            -Dbooks.api.url=${{ secrets.BOOKS_API_URL }} \
+            -Drick.api.url=${{ secrets.RICK_API_URL }} \
+            -Djsonplaceholder.api.url=${{ secrets.JSONPLACEHOLDER_API_URL }} \
+            -Dsoap.api.url=${{ secrets.SOAP_API_URL }} \
             -Djava.net.useSystemProxies=false \
             -DsocksProxyHost="" \
             -DsocksProxyPort="" \
