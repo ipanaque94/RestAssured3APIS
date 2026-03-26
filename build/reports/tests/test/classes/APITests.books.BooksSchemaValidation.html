@@ -23,25 +23,25 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">6</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">3</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">3</div>
+<div class="counter">0</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.189s</div>
+<div class="counter">1.964s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,360 +61,12 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
-<a href="#">Failed tests</a>
-</li>
-<li>
-<a href="#">Ignored tests</a>
-</li>
-<li>
 <a href="#">Tests</a>
 </li>
 <li>
 <a href="#">Standard output</a>
 </li>
 </ul>
-<div class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="setup"></a>
-<h3 class="failures">setup</h3>
-<span class="code">
-<pre id="test-message-setup">java.lang.RuntimeException: No se pudo obtener token despuÃ©s de varios intentos
-	at APITests.baseUrl.BaseBooksTest.obtenerToken(BaseBooksTest.java:47)
-	at APITests.baseUrl.BaseBooksTest.setup(BaseBooksTest.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestRunner.runTests(TestNGTestRunner.java:131)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:103)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-setup">Copy</button>
-</span>
-</div>
-<div class="test">
-<a name="setup"></a>
-<h3 class="failures">setup</h3>
-<span class="code">
-<pre id="test-message-setup">java.lang.RuntimeException: No se pudo obtener token despuÃ©s de varios intentos
-	at APITests.baseUrl.BaseBooksTest.obtenerToken(BaseBooksTest.java:47)
-	at APITests.baseUrl.BaseBooksTest.setup(BaseBooksTest.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestRunner.runTests(TestNGTestRunner.java:131)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:103)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-setup">Copy</button>
-</span>
-</div>
-<div class="test">
-<a name="setup"></a>
-<h3 class="failures">setup</h3>
-<span class="code">
-<pre id="test-message-setup">java.lang.RuntimeException: No se pudo obtener token despuÃ©s de varios intentos
-	at APITests.baseUrl.BaseBooksTest.obtenerToken(BaseBooksTest.java:47)
-	at APITests.baseUrl.BaseBooksTest.setup(BaseBooksTest.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestRunner.runTests(TestNGTestRunner.java:131)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:103)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-setup">Copy</button>
-</span>
-</div>
-</div>
-<div class="tab">
-<h2>Ignored tests</h2>
-<div class="test">
-<a name="validarSchemaDeBooksEsCorrecto"></a>
-<h3 class="skipped">validarSchemaDeBooksEsCorrecto</h3>
-<span class="code">
-<pre id="test-message-validarSchemaDeBooksEsCorrecto">No se pudo obtener token despuÃ©s de varios intentos
-
-java.lang.RuntimeException: No se pudo obtener token despuÃ©s de varios intentos
-	at APITests.baseUrl.BaseBooksTest.obtenerToken(BaseBooksTest.java:47)
-	at APITests.baseUrl.BaseBooksTest.setup(BaseBooksTest.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestRunner.runTests(TestNGTestRunner.java:131)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:103)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-validarSchemaDeBooksEsCorrecto">Copy</button>
-</span>
-</div>
-<div class="test">
-<a name="validarSchemaDeBooksEsCorrecto"></a>
-<h3 class="skipped">validarSchemaDeBooksEsCorrecto</h3>
-<span class="code">
-<pre id="test-message-validarSchemaDeBooksEsCorrecto">No se pudo obtener token despuÃ©s de varios intentos
-
-java.lang.RuntimeException: No se pudo obtener token despuÃ©s de varios intentos
-	at APITests.baseUrl.BaseBooksTest.obtenerToken(BaseBooksTest.java:47)
-	at APITests.baseUrl.BaseBooksTest.setup(BaseBooksTest.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestRunner.runTests(TestNGTestRunner.java:131)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:103)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-validarSchemaDeBooksEsCorrecto">Copy</button>
-</span>
-</div>
-<div class="test">
-<a name="validarSchemaDeBooksEsCorrecto"></a>
-<h3 class="skipped">validarSchemaDeBooksEsCorrecto</h3>
-<span class="code">
-<pre id="test-message-validarSchemaDeBooksEsCorrecto">No se pudo obtener token despuÃ©s de varios intentos
-
-java.lang.RuntimeException: No se pudo obtener token despuÃ©s de varios intentos
-	at APITests.baseUrl.BaseBooksTest.obtenerToken(BaseBooksTest.java:47)
-	at APITests.baseUrl.BaseBooksTest.setup(BaseBooksTest.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestRunner.runTests(TestNGTestRunner.java:131)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:103)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-validarSchemaDeBooksEsCorrecto">Copy</button>
-</span>
-</div>
-</div>
 <div class="tab">
 <h2>Tests</h2>
 <table>
@@ -426,112 +78,193 @@ java.lang.RuntimeException: No se pudo obtener token despuÃ©s de varios intent
 </tr>
 </thead>
 <tr>
-<td class="failures">setup</td>
-<td class="failures">0.069s</td>
-<td class="failures">failed</td>
+<td class="success">validarSchemaDeBooksEsCorrecto</td>
+<td class="success">0.182s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">setup</td>
-<td class="failures">0.083s</td>
-<td class="failures">failed</td>
+<td class="success">validarSchemaDeBooksEsCorrecto</td>
+<td class="success">1.596s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">setup</td>
-<td class="failures">0.037s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="skipped">validarSchemaDeBooksEsCorrecto</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
-</tr>
-<tr>
-<td class="skipped">validarSchemaDeBooksEsCorrecto</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
-</tr>
-<tr>
-<td class="skipped">validarSchemaDeBooksEsCorrecto</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
+<td class="success">validarSchemaDeBooksEsCorrecto</td>
+<td class="success">0.186s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre id="class-stdout">Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 1 fallÃ³ con status: 403
-Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 2 fallÃ³ con status: 403
-Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 3 fallÃ³ con status: 403
-Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 1 fallÃ³ con status: 403
-Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 2 fallÃ³ con status: 403
-Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 3 fallÃ³ con status: 403
-Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 1 fallÃ³ con status: 403
-Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 2 fallÃ³ con status: 403
-Request URI:	http://localhost:8080/api-clients
-Respuesta: {
-&quot;servlet&quot;:&quot;Stapler&quot;,
-&quot;message&quot;:&quot;No valid crumb was included in the request&quot;,
-&quot;url&quot;:&quot;/api-clients&quot;,
-&quot;status&quot;:&quot;403&quot;
-}
-Intento 3 fallÃ³ con status: 403
+<pre id="class-stdout">Request URI:	https://simple-books-api.click:443/api-clients
+Respuesta: {&quot;accessToken&quot;:&quot;54f412d9a8016668be5ab82590dd76a96092ad3580e0f3ee3ad6f3019c508c2a&quot;}
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 417
+Connection: keep-alive
+Date: Thu, 26 Mar 2026 19:46:55 GMT
+X-Amzn-Trace-Id: Root=1-69c58d2e-1861b1cf20af10e45def34a4;Parent=7f91b0c0caa4a552;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 9e15d2e2-3a59-446a-ad1b-0b8d95626083
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
+x-amz-apigw-id: a2L_ZHnFoAMEDxw=
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
+X-Cache: Miss from cloudfront
+Via: 1.1 eec3bf841ac636f9a2400eb19e13aac0.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LIM50-P4
+X-Amz-Cf-Id: 0Z4Ukpp2t5mbU6DX8Sgg9sjN3YRi3l1olenvtu8wkBtKMdoF5tG1rw==
+
+[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;The Russian&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;The Vanishing Half&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;The Midnight Library&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Viscount Who Loved Me&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Just as I Am&quot;,
+        &quot;type&quot;: &quot;non-fiction&quot;,
+        &quot;available&quot;: false
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Untamed&quot;,
+        &quot;type&quot;: &quot;non-fiction&quot;,
+        &quot;available&quot;: true
+    }
+]
+Request URI:	https://simple-books-api.click:443/api-clients
+Respuesta: {&quot;accessToken&quot;:&quot;300a2f149f484c2cde0ccdf181fb27daf65b4c1621d7ce88ce4b27b9e93cfb07&quot;}
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 417
+Connection: keep-alive
+Date: Thu, 26 Mar 2026 19:47:03 GMT
+X-Amzn-Trace-Id: Root=1-69c58d37-5fc2b8dd3c3a7d8240581580;Parent=5f0a546c092f7605;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 93a2b47d-4639-4d80-a50b-0221d572153d
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
+x-amz-apigw-id: a2MAsHPoIAMEbzQ=
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
+X-Cache: Miss from cloudfront
+Via: 1.1 7b13d4b7bc095e51e2c6d7e031fe2bc4.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LIM50-P4
+X-Amz-Cf-Id: bCjRBiYZ7ip-7R17FXEb4UC4Dbdbx1KRNBHbU9MRns-9OPMaAPhy2A==
+
+[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;The Russian&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;The Vanishing Half&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;The Midnight Library&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Viscount Who Loved Me&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Just as I Am&quot;,
+        &quot;type&quot;: &quot;non-fiction&quot;,
+        &quot;available&quot;: false
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Untamed&quot;,
+        &quot;type&quot;: &quot;non-fiction&quot;,
+        &quot;available&quot;: true
+    }
+]
+Request URI:	https://simple-books-api.click:443/api-clients
+Respuesta: {&quot;accessToken&quot;:&quot;5ad0a3ad4f0ecb15f6f9a873e9aad54bd0ca977e40a26b523177970b258981d5&quot;}
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 417
+Connection: keep-alive
+Date: Thu, 26 Mar 2026 19:47:06 GMT
+X-Amzn-Trace-Id: Root=1-69c58d39-67c9cb153f17e48c0946a5f1;Parent=0640661b3b676bb0;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: ef53da85-0360-4acd-bd91-7fbbf031d9c5
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
+x-amz-apigw-id: a2MBHFNYoAMEkDg=
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
+X-Cache: Miss from cloudfront
+Via: 1.1 1a8f4e7ec86ac95ada5cd8e1bafd669e.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LIM50-P4
+X-Amz-Cf-Id: KcAwdPaARGf9AsJoWSt0jcsvb7cRFkmyfbX5T8wlRgcNmoyhhhqZWw==
+
+[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;The Russian&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;The Vanishing Half&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;The Midnight Library&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Viscount Who Loved Me&quot;,
+        &quot;type&quot;: &quot;fiction&quot;,
+        &quot;available&quot;: true
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Just as I Am&quot;,
+        &quot;type&quot;: &quot;non-fiction&quot;,
+        &quot;available&quot;: false
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Untamed&quot;,
+        &quot;type&quot;: &quot;non-fiction&quot;,
+        &quot;available&quot;: true
+    }
+]
 </pre>
 <button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stdout">Copy</button>
 </span>
@@ -544,7 +277,7 @@ Intento 3 fallÃ³ con status: 403
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.1.0</a> at 26 mar. 2026 2:22:58 p. m.</p>
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at 26 mar. 2026 2:47:14 p. m.</p>
 </div>
 </div>
 </body>

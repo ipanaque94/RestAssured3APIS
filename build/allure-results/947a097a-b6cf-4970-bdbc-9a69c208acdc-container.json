@@ -1,0 +1,1 @@
+{"uuid":"947a097a-b6cf-4970-bdbc-9a69c208acdc","name":"APITests.dataaccess.SoapTest","children":["3a96b588-02b9-49c9-a11d-6e629bae4500"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1774554417833,"stop":1774554417834}],"afters":[],"start":1774554406553,"stop":1774554418674}

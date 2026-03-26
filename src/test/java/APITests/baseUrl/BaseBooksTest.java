@@ -12,15 +12,18 @@ public class BaseBooksTest {
 
     protected String token;
 
-    protected static final RequestSpecification spec = new RequestSpecBuilder()
-            .addHeader("Content-Type", "application/json")
-            .addHeader("Accept", "application/json")
-            .build();
+    protected RequestSpecification spec;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
         RestAssured.baseURI = Config.get("books.api.url");
+        RestAssured.port = 443;
         RestAssured.useRelaxedHTTPSValidation();
+
+        spec = new RequestSpecBuilder()
+                .addHeader("Content-Type", "application/json")
+                .addHeader("Accept", "application/json")
+                .build();
 
         token = obtenerToken();
     }

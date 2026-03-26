@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.auth.AuthTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2026-03-26T19:22:43.807Z" hostname="DESKTOP-IOAC1DS" time="11.936">
+<testsuite name="APITests.auth.AuthTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2026-03-26T19:46:46.680Z" hostname="DESKTOP-IOAC1DS" time="21.498">
   <properties/>
-  <testcase name="registroExitosoRetorna201ConToken" classname="APITests.auth.AuthTest" time="2.083">
+  <testcase name="registroExitosoRetorna201ConToken" classname="APITests.auth.AuthTest" time="4.23">
     <failure message="java.lang.AssertionError: 1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;403&gt;.&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
 Expected status code &lt;201&gt; but was &lt;403&gt;.
 
@@ -88,23 +88,23 @@ Expected status code &lt;201&gt; but was &lt;403&gt;.
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="validarCuerpoVacioRetorna400" classname="APITests.auth.AuthTest" time="1.609"/>
-  <testcase name="validarSoloNombreRetorna400" classname="APITests.auth.AuthTest" time="0.195"/>
+  <testcase name="validarCuerpoVacioRetorna400" classname="APITests.auth.AuthTest" time="0.175"/>
+  <testcase name="validarSoloNombreRetorna400" classname="APITests.auth.AuthTest" time="0.189"/>
   <system-out><![CDATA[HTTP/1.1 400 Bad Request
 Content-Type: application/json
 Content-Length: 43
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 19:22:55 GMT
-X-Amzn-Trace-Id: Root=1-69c5878e-6e3bd1952e8bf233046e1504;Parent=1ccfb251646cddb6;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 7610edf2-4db7-4aa4-b912-13e9d020bf30
+Date: Thu, 26 Mar 2026 19:47:07 GMT
+X-Amzn-Trace-Id: Root=1-69c58d3b-230f4e7c3d83234d5ffb1342;Parent=355f6f824d8f4054;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: dc5d8a48-fa7a-4ea3-b5d1-158fee1c55f3
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2IeZEXNoAMEFsw=
+x-amz-apigw-id: a2MBWFnPoAMEqLQ=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 e9794b5f9d4c59e1fd306528f42b4f7c.cloudfront.net (CloudFront)
+Via: 1.1 348d7c18d8ac60e3b6b1679992a9f608.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: CxUZfteDnAvYyGWie8IKKv-r6fjVOSetTirSvde-QHVQoMm70WGw4A==
+X-Amz-Cf-Id: dlDcctMsLkLa5v56asC-wb0NQRLk_2mUNa_jWojy0VBcc-BH-ah5tA==
 
 {
     "error": "Invalid or missing client name."
@@ -113,17 +113,17 @@ HTTP/1.1 400 Bad Request
 Content-Type: application/json
 Content-Length: 44
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 19:22:55 GMT
-X-Amzn-Trace-Id: Root=1-69c5878f-53a6569b157a26270fe9ab67;Parent=644d69c1c53933f5;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: eb3655cd-253a-496c-b343-ebc41f587c31
+Date: Thu, 26 Mar 2026 19:47:07 GMT
+X-Amzn-Trace-Id: Root=1-69c58d3b-7bb6fda50950845a5b0edf94;Parent=391cfe636f16c674;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 5ac3d116-679a-43bb-851a-93d8b4ae9913
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2IecEUYoAMEDLQ=
+x-amz-apigw-id: a2MBYGtxIAMEfow=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 c1477303aa5855835087130b6a6b1406.cloudfront.net (CloudFront)
+Via: 1.1 1a8f4e7ec86ac95ada5cd8e1bafd669e.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: -0Lzq3IT-UftOIYKRh0NiAL87othCQwSr52qwFJ4yFCEMNAkvrj1pA==
+X-Amz-Cf-Id: pGb-jZo1W6WTm9YfxhmEZ3seOF8LF6RdyNC_IQtE4T_vlIN5UzG2JQ==
 
 {
     "error": "Invalid or missing client email."
