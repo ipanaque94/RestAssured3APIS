@@ -23,7 +23,6 @@ public class BooksSchemaValidation extends BaseBooksTest {
 
         given()
                 .spec(spec)
-                .header("Content-Type", "application/json")
                 .when()
                 .get("/books")
                 .then()

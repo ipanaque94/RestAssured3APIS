@@ -6,8 +6,6 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -18,15 +16,9 @@ public class SoapTest {
 
     @BeforeClass
     public void setup() {
-        System.setProperty("java.net.useSystemProxies", "false");
-        System.setProperty("socksProxyHost", "");
-        System.setProperty("https.protocols", "TLSv1.2,TLSv1.3");
         RestAssured.baseURI = APITests.utils.Config.get("soap.api.url");
         RestAssured.useRelaxedHTTPSValidation();
-        RestAssured.requestSpecification = new RequestSpecBuilder()
-                .addHeader("User-Agent",
-                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
-                .build();
+        // ✅ SOAP no necesita spec base — cada request define su propio Content-Type XML
     }
 
     @Severity(SeverityLevel.NORMAL)
@@ -47,7 +39,6 @@ public class SoapTest {
                 """;
 
         given()
-
                 .header("Content-Type", "text/xml; charset=utf-8")
                 .header("SOAPAction", "")
                 .body(soapBody)

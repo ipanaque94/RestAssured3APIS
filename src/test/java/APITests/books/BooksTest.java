@@ -23,7 +23,6 @@ public class BooksTest extends BaseBooksTest {
     public void validarStatusCode200Books() {
         given()
                 .spec(spec)
-                .header("Content-Type", "application/json")
                 .when()
                 .get("/books")
                 .then()
@@ -40,7 +39,6 @@ public class BooksTest extends BaseBooksTest {
     public void validarTiempoDeRespuesta() {
         given()
                 .spec(spec)
-                .header("Content-Type", "application/json")
                 .when()
                 .get("/books")
                 .then()
@@ -55,8 +53,8 @@ public class BooksTest extends BaseBooksTest {
     @Test(groups = { "Books", "Regression" })
     public void listarLibrosConToken() {
         Response response = given()
+                .spec(spec)
                 .header("Authorization", "Bearer " + token)
-                .header("Accept", "application/json")
                 .when()
                 .get("/books")
                 .then()
@@ -84,7 +82,6 @@ public class BooksTest extends BaseBooksTest {
     public void validarLibroPorId(int bookId) {
         given()
                 .spec(spec)
-                .header("Content-Type", "application/json")
                 .when()
                 .get("/books/" + bookId)
                 .then()
@@ -101,7 +98,6 @@ public class BooksTest extends BaseBooksTest {
     public void validarStatusCode404LibroNoExiste() {
         given()
                 .spec(spec)
-                .header("Content-Type", "application/json")
                 .when()
                 .get("/books/999")
                 .then()

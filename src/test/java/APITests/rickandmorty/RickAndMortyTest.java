@@ -8,7 +8,6 @@ import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -17,19 +16,14 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class RickAndMortyTest {
+
     protected static RequestSpecification spec;
 
     @BeforeClass
     public void setup() {
-
-        System.setProperty("java.net.useSystemProxies", "false");
-        System.setProperty("socksProxyHost", "");
-        System.setProperty("https.protocols", "TLSv1.2,TLSv1.3");
-
         RestAssured.baseURI = APITests.utils.Config.get("rick.api.url");
         RestAssured.useRelaxedHTTPSValidation();
         spec = new RequestSpecBuilder()
-                .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
                 .addHeader("Accept", "application/json")
                 .build();
     }
@@ -41,7 +35,7 @@ public class RickAndMortyTest {
     @Test(groups = { "RickAndMorty", "Smoke" })
     public void testGetPersonajeRick() {
         given()
-
+                .spec(spec)
                 .when()
                 .get("/character/1")
                 .then()
@@ -59,14 +53,13 @@ public class RickAndMortyTest {
     @Test(groups = { "RickAndMorty", "Regression" })
     public void testValidarCamposAnidadosConJsonPath() {
         given()
+                .spec(spec)
                 .when()
                 .get("/character/1")
                 .then()
                 .statusCode(200)
-                // Objeto location
                 .body("location.name", notNullValue())
                 .body("location.url", notNullValue())
-                // Objeto origin
                 .body("origin.name", equalTo("Earth (C-137)"));
     }
 }

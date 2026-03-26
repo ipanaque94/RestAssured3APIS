@@ -26,26 +26,21 @@ public class IdempotenciaTest extends BaseBooksTest {
 
                 Response primerPATCH = given()
                                 .spec(spec)
-                                .header("Content-Type", "application/json")
                                 .header("Authorization", "Bearer " + token)
                                 .body(cuerpoActualizacion)
                                 .when()
                                 .patch("/orders/" + orderId)
                                 .then()
-                                .assertThat()
                                 .statusCode(204)
                                 .extract().response();
 
-                // Segunda actualización
                 Response segundoPATCH = given()
                                 .spec(spec)
-                                .header("Content-Type", "application/json")
                                 .header("Authorization", "Bearer " + token)
                                 .body(cuerpoActualizacion)
                                 .when()
                                 .patch("/orders/" + orderId)
                                 .then()
-                                .assertThat()
                                 .statusCode(204)
                                 .extract().response();
 
@@ -70,7 +65,6 @@ public class IdempotenciaTest extends BaseBooksTest {
                                 .when()
                                 .delete("/orders/" + orderId)
                                 .then()
-                                .assertThat()
                                 .statusCode(204)
                                 .extract().response();
 
@@ -80,7 +74,6 @@ public class IdempotenciaTest extends BaseBooksTest {
                                 .when()
                                 .delete("/orders/" + orderId)
                                 .then()
-                                .assertThat()
                                 .statusCode(404)
                                 .extract().response();
 
@@ -91,17 +84,13 @@ public class IdempotenciaTest extends BaseBooksTest {
         }
 
         private String crearOrden(String token) {
-                String cuerpoOrden = "{\"bookId\": 1, \"customerName\": \"Enoc\"}";
-
                 return given()
                                 .spec(spec)
-                                .header("Content-Type", "application/json")
                                 .header("Authorization", "Bearer " + token)
-                                .body(cuerpoOrden)
+                                .body("{\"bookId\": 1, \"customerName\": \"Enoc\"}")
                                 .when()
                                 .post("/orders")
                                 .then()
-                                .assertThat()
                                 .statusCode(201)
                                 .extract()
                                 .response()

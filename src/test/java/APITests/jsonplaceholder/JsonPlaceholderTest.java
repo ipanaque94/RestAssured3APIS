@@ -8,6 +8,7 @@ import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,19 +17,18 @@ import static org.hamcrest.Matchers.*;
 
 public class JsonPlaceholderTest {
 
+    protected static RequestSpecification spec;
+
     @BeforeClass
     public void setup() {
-        System.setProperty("java.net.useSystemProxies", "false");
-        System.setProperty("socksProxyHost", "");
-        System.setProperty("https.protocols", "TLSv1.2,TLSv1.3");
         RestAssured.baseURI = APITests.utils.Config.get("jsonplaceholder.api.url");
         RestAssured.useRelaxedHTTPSValidation();
-        RestAssured.requestSpecification = new RequestSpecBuilder()
-                .addHeader("User-Agent",
-                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+        // ✅ Solo Content-Type y Accept — sin User-Agent de navegador
+        spec = new RequestSpecBuilder()
+                .addHeader("Content-Type", "application/json")
                 .addHeader("Accept", "application/json")
                 .build();
-         }
+    }
 
     @Severity(SeverityLevel.BLOCKER)
     @Description("GET /posts/1 debe retornar 200, userId=1 y title no nulo")
@@ -37,10 +37,9 @@ public class JsonPlaceholderTest {
     @Test(groups = { "JsonPlaceholder", "Smoke" })
     public void testGetPost() {
         given()
-                
-                .header("Content-Type", "application/json")
-               
-
+                .spec(spec)
+                .when()
+                .get("/posts/1")           // ✅ .get() faltaba en el original
                 .then()
                 .statusCode(200)
                 .body("userId", equalTo(1))
@@ -54,6 +53,7 @@ public class JsonPlaceholderTest {
     @Test(groups = { "JsonPlaceholder", "Regression" })
     public void testGetUserYValidarCampos() {
         Response response = given()
+                .spec(spec)
                 .when()
                 .get("/users/1")
                 .then()
@@ -61,15 +61,15 @@ public class JsonPlaceholderTest {
                 .extract()
                 .response();
 
-        System.out.println("Name: " + response.path("name"));
+        System.out.println("Name: "     + response.path("name"));
         System.out.println("Username: " + response.path("username"));
-        System.out.println("Email: " + response.path("email"));
-        System.out.println("Lat: " + response.path("address.geo.lat"));
+        System.out.println("Email: "    + response.path("email"));
+        System.out.println("Lat: "      + response.path("address.geo.lat"));
 
         response.then()
-                .body("name", equalTo("Leanne Graham"))
-                .body("username", equalTo("Bret"))
-                .body("email", equalTo("Sincere@april.biz"))
+                .body("name",            equalTo("Leanne Graham"))
+                .body("username",        equalTo("Bret"))
+                .body("email",           equalTo("Sincere@april.biz"))
                 .body("address.geo.lat", equalTo("-37.3159"));
     }
 
@@ -88,7 +88,7 @@ public class JsonPlaceholderTest {
                 """;
 
         given()
-                .header("Content-Type", "application/json")
+                .spec(spec)
                 .body(body)
                 .when()
                 .post("/posts")
@@ -114,7 +114,7 @@ public class JsonPlaceholderTest {
                 """;
 
         given()
-                .header("Content-Type", "application/json")
+                .spec(spec)
                 .body(body)
                 .when()
                 .put("/posts/1")
@@ -130,7 +130,7 @@ public class JsonPlaceholderTest {
     @Test(groups = { "JsonPlaceholder", "Regression" })
     public void testEliminarPost() {
         given()
-                .header("Content-Type", "application/json")
+                .spec(spec)
                 .when()
                 .delete("/posts/1")
                 .then()
