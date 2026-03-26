@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Idempotencia Tests" verbose="1" parallel="none">
+    <test name="Idempotencia Tests">
+        <groups><run><include name="Idempotencia"/></run></groups>
+        <classes>
+            <class name="APITests.books.IdempotenciaTest"/>
+        </classes>
+    </test>
+</suite>

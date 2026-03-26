@@ -9,6 +9,8 @@ import io.qameta.allure.Story;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.testng.annotations.Test;
 
+import APITests.baseUrl.BaseBooksTest;
+
 import static io.restassured.RestAssured.given;
 
 public class BooksSchemaValidation extends BaseBooksTest {

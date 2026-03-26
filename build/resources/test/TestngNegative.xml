@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Negative Tests" verbose="1" parallel="none">
+    <test name="Negative Tests">
+        <groups><run><include name="Negative"/></run></groups>
+        <classes>
+            <class name="APITests.auth.AuthTest"/>
+            <class name="APITests.books.BooksTest"/>
+            <class name="APITests.books.OrdersTest"/>
+        </classes>
+    </test>
+</suite>

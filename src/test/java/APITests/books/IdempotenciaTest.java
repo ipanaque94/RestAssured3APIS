@@ -9,6 +9,8 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import APITests.baseUrl.BaseBooksTest;
+
 import static io.restassured.RestAssured.given;
 
 public class IdempotenciaTest extends BaseBooksTest {

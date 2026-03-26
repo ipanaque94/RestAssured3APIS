@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Tests" verbose="1" parallel="none">
+    <test name="Smoke Tests">
+        <groups><run><include name="Smoke"/></run></groups>
+        <classes>
+            <class name="APITests.auth.AuthTest"/>
+            <class name="APITests.books.BooksTest"/>
+            <class name="APITests.books.OrdersTest"/>
+            <class name="APITests.books.BooksSchemaValidation"/>
+            <class name="APITests.rickandmorty.RickAndMortyTest"/>
+            <class name="APITests.jsonplaceholder.JsonPlaceholderTest"/>
+            <class name="APITests.dataaccess.SoapTest"/>
+        </classes>
+    </test>
+</suite>

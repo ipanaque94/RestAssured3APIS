@@ -5,28 +5,15 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.specification.RequestSpecification;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import APITests.baseUrl.BaseRickMorty;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class RickAndMortyTest {
-
-    protected static RequestSpecification spec;
-
-    @BeforeClass
-    public void setup() {
-        RestAssured.baseURI = APITests.utils.Config.get("rick.api.url");
-        RestAssured.useRelaxedHTTPSValidation();
-        spec = new RequestSpecBuilder()
-                .addHeader("Accept", "application/json")
-                .build();
-    }
+public class RickAndMortyTest extends BaseRickMorty {
 
     @Severity(SeverityLevel.BLOCKER)
     @Description("GET /character/1 debe retornar 200 y los datos de Rick Sanchez correctos")

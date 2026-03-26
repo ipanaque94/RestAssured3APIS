@@ -5,21 +5,14 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import io.restassured.RestAssured;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import APITests.baseUrl.BaseDataAcceess;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
 
-public class SoapTest {
-
-    @BeforeClass
-    public void setup() {
-        RestAssured.baseURI = APITests.utils.Config.get("soap.api.url");
-        RestAssured.useRelaxedHTTPSValidation();
-        // ✅ SOAP no necesita spec base — cada request define su propio Content-Type XML
-    }
+public class SoapTest extends BaseDataAcceess {
 
     @Severity(SeverityLevel.NORMAL)
     @Description("POST SOAP NumberToWords con ubiNum=500 debe retornar 'five hundred' en la respuesta XML")

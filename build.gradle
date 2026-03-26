@@ -43,10 +43,26 @@ sourceSets {
         }
     }
 }
-
+def suiteMap = [
+    "All"          : "src/test/resources/TestNG.xml",
+    "Smoke"        : "src/test/resources/TestngSmoke.xml",
+    "Regression"   : "src/test/resources/TestngRegression.xml",
+    "Contract"     : "src/test/resources/TestngContract.xml",
+    "Security"     : "src/test/resources/TestngSecurity.xml",
+    "Negative"     : "src/test/resources/TestngNegative.xml",
+    "Idempotencia" : "src/test/resources/TestngIdempotencia.xml",
+    "Performance"  : "src/test/resources/TestngPerformance.xml",
+    "SOAP"         : "src/test/resources/TestsngSoap.xml"
+]
+ 
 tasks.named('test') {
     useTestNG() {
-        suites 'src/test/resources/TestNG.xml'
+        def suite = System.getProperty("suite", "All")
+        def suiteFile = suiteMap[suite]
+        if (suiteFile == null) {
+            throw new GradleException("Suite desconocida: '${suite}'. Opciones válidas: ${suiteMap.keySet()}")
+        }
+        suites suiteFile
     }
 
     jvmArgs += [

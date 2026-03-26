@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Security Tests" verbose="1" parallel="none">
+    <test name="Security Tests">
+        <groups><run><include name="Security"/></run></groups>
+        <classes>
+            <class name="APITests.auth.AuthTest"/>
+            <class name="APITests.books.OrdersTest"/>
+        </classes>
+    </test>
+</suite>

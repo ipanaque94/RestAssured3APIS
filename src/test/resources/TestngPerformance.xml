@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Performance Tests" verbose="1" parallel="none">
+    <test name="Performance Tests">
+        <groups><run><include name="Performance"/></run></groups>
+        <classes>
+            <class name="APITests.books.BooksTest"/>
+        </classes>
+    </test>
+</suite>
