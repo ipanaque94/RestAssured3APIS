@@ -23,7 +23,6 @@ public class OrdersTest extends BaseBooksTest {
     public void listarOrdenes() {
         given()
                 .spec(spec)
-                // ✅ Solo Authorization — Content-Type ya viene en spec
                 .header("Authorization", "Bearer " + token)
                 .when()
                 .get("/orders")
@@ -54,15 +53,15 @@ public class OrdersTest extends BaseBooksTest {
 
         System.out.println("Order ID creado: " + respuesta.getOrderId());
     }
-                
+
     @Severity(SeverityLevel.CRITICAL)
     @Description("POST /orders con token válido pero cuerpo vacío debe retornar 400")
     @Story("Manejo de errores")
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Orders", "Negative" })
     public void validarStatusCode400CuandoCuerpoEsInvalido() {
-     
-
+        given()
+                .spec(spec)
                 .header("Authorization", "Bearer " + token)
                 .body("{}")
                 .when()
@@ -93,9 +92,9 @@ public class OrdersTest extends BaseBooksTest {
     public Object[][] tokensInvalidos() {
         return new Object[][] {
                 { "tokenFalso123", 401 },
-                { "invalidoToken",  401 },
-                { "",               401 }
-        };
+                { "invalidoToken", 401 },
+                { "", 401}
+        }; 
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -105,8 +104,8 @@ public class OrdersTest extends BaseBooksTest {
     @Test(dataProvider = "tokensInvalidos", groups = { "Orders", "Security", "Negative" })
     public void validarTokensInvalidosEnGet(String tokenInvalido, int statusEsperado) {
         given()
-                .spec(spec) 
-                .head on", "Bearer " + tokenInvalido)
+                .spec(spec)
+                .header("Authorization", "Bearer " + tokenInvalido)
                 .when()
                 .get("/orders")
                 .then()
