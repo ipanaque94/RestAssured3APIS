@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.books.IdempotenciaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-26T19:47:02.143Z" hostname="DESKTOP-IOAC1DS" time="10.01">
+<testsuite name="APITests.books.IdempotenciaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-26T20:37:04.035Z" hostname="DESKTOP-IOAC1DS" time="10.786">
   <properties/>
-  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.59"/>
-  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.558"/>
-  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.615"/>
-  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.597"/>
+  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.56"/>
+  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.754"/>
+  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.532"/>
+  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.539"/>
   <system-out><![CDATA[Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"45fb8d44bdd47ad28bf0335c8f702400d65a8fa87ffec28f71f1c93ed5c9f95a"}
-Order creada para DELETE: 2Cbz_b5MgJJKXgy3CxEVr
-Order creada para PATCH: RPt5_0461sx7_2kuYvln1
+Respuesta: {"accessToken":"a394d801655c9cbfb1c2fa29e1d17b8c62e1743bde96ca4efb02dcc65570c579"}
+Order creada para DELETE: xD3YMEkd9u-eQGZC1VsPR
+Order creada para PATCH: UNWtFokMMGQwuVb2KDeu5
 Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"e490d171eee618ee3d57e1ce40f7c0dac2a6472d6ef1565259713d80917a7acc"}
-Order creada para DELETE: UJSSLjVr2hjjTa1F3NVA4
-Order creada para PATCH: SAAIma7XzUyCKpRTjWbRY
+Respuesta: {"accessToken":"4190b0e3fbc1f623b2bb0610dc5d1eee890cf63d4d5f5d500512d3ec3f328bb6"}
+Order creada para DELETE: wnqq5kgpGWJ3pmFbr6DMN
+Order creada para PATCH: bYCJXnqa4vHfBhmoME6Jd
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

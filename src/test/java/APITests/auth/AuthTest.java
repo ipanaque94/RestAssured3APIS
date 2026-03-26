@@ -5,23 +5,16 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import io.restassured.RestAssured;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import APITests.baseUrl.BaseBooksTest;
 import APITests.utils.Config;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class AuthTest {
-
-    @BeforeClass
-    // @Test(groups = { "Auth" })
-    public void setup() {
-        RestAssured.baseURI = Config.get("books.api.url");
-    }
+public class AuthTest extends BaseBooksTest {
 
     @Severity(SeverityLevel.BLOCKER)
     @Description("POST /api-clients sin cuerpo debe retornar 400 con mensaje de nombre inválido")
@@ -65,15 +58,12 @@ public class AuthTest {
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Auth", "Smoke", "Regression" })
     public void registroExitosoRetorna201ConToken() {
-        String email = "user" + new java.util.Random().nextInt(80000) + "@example.com";
-
         given()
-                .header("Content-Type", "application/json")
-                .body("{\"clientName\": \"Postman\", \"clientEmail\": \"" + email + "\"}")
+                .spec(spec)
+                .body("{\"clientName\": \"Postman\", \"clientEmail\": \"" + generateRandomEmail() + "\"}")
                 .when()
                 .post("/api-clients")
                 .then()
-                .assertThat()
                 .statusCode(201)
                 .body("accessToken", notNullValue())
                 .log().all();

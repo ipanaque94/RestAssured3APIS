@@ -5,12 +5,13 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import APITests.baseUrl.BaseDataAcceess;
-
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.containsString;
 
 public class SoapTest extends BaseDataAcceess {
 
@@ -20,6 +21,8 @@ public class SoapTest extends BaseDataAcceess {
     @Owner("Enoc Ipanaque")
     @Test(groups = { "SOAP", "Smoke" })
     public void testNumeroApalabras500() {
+        String endpoint = "https://www.dataaccess.com/webservicesserver/NumberConversion.wso";
+
         String soapBody = """
                 <?xml version="1.0" encoding="utf-8"?>
                 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -31,14 +34,15 @@ public class SoapTest extends BaseDataAcceess {
                 </soap:Envelope>
                 """;
 
-        given()
-                .header("Content-Type", "text/xml; charset=utf-8")
-                .header("SOAPAction", "")
+        Response response = RestAssured.given()
+                .contentType("text/xml; charset=UTF-8")
+                .header("SOAPAction", "NumberToWords") // 👈 este es el cambio clave
                 .body(soapBody)
-                .when()
-                .post("/webservicesserver/numberconversion.wso")
-                .then()
-                .statusCode(200)
-                .body(containsString("five hundred"));
+                .post(endpoint);
+
+        Assert.assertEquals(response.getStatusCode(), 200);
+
+        String numberInWords = response.xmlPath().getString("//*[local-name()='NumberToWordsResult']").trim();
+        Assert.assertEquals(numberInWords, "five hundred");
     }
 }

@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.594s</div>
+<div class="counter">0.910s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">66%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,110 +61,12 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
-<a href="#">Failed tests</a>
-</li>
-<li>
 <a href="#">Tests</a>
 </li>
 <li>
 <a href="#">Standard output</a>
 </li>
 </ul>
-<div class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="registroExitosoRetorna201ConToken"></a>
-<h3 class="failures">registroExitosoRetorna201ConToken</h3>
-<span class="code">
-<pre id="test-message-registroExitosoRetorna201ConToken">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;201&gt; but was &lt;403&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at APITests.auth.AuthTest.registroExitosoRetorna201ConToken(AuthTest.java:77)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestRunner.runTests(TestNGTestRunner.java:131)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:103)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-registroExitosoRetorna201ConToken">Copy</button>
-</span>
-</div>
-</div>
 <div class="tab">
 <h2>Tests</h2>
 <table>
@@ -176,18 +78,18 @@ Expected status code &lt;201&gt; but was &lt;403&gt;.
 </tr>
 </thead>
 <tr>
-<td class="failures">registroExitosoRetorna201ConToken</td>
-<td class="failures">4.230s</td>
-<td class="failures">failed</td>
+<td class="success">registroExitosoRetorna201ConToken</td>
+<td class="success">0.526s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">validarCuerpoVacioRetorna400</td>
-<td class="success">0.175s</td>
+<td class="success">0.181s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">validarSoloNombreRetorna400</td>
-<td class="success">0.189s</td>
+<td class="success">0.203s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -195,21 +97,44 @@ Expected status code &lt;201&gt; but was &lt;403&gt;.
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre id="class-stdout">HTTP/1.1 400 Bad Request
+<pre id="class-stdout">Request URI:	https://simple-books-api.click:443/api-clients
+Respuesta: {&quot;accessToken&quot;:&quot;97695edeed195b8120610340b4c937928f784d4ea69e7b68d4611d129c709081&quot;}
+HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 82
+Connection: keep-alive
+Date: Thu, 26 Mar 2026 20:36:55 GMT
+X-Amzn-Trace-Id: Root=1-69c598e7-64d1383844258e09718e172f;Parent=14e809873c2839b1;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 3014f7b4-9c3a-44f4-a94f-3f7cc91a8fde
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
+x-amz-apigw-id: a2TUPFMwIAMEmZQ=
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
+X-Cache: Miss from cloudfront
+Via: 1.1 fa8b0effa6df576b1019d4a3c72e50c6.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LIM50-P4
+X-Amz-Cf-Id: Tn7j7Ve_f7KHAcGFDMf_f12b1W-E_ChOgDY14exAjKuKM-EmKV8Xhg==
+
+{
+    &quot;accessToken&quot;: &quot;7f579f1c1ddd14cc0de7c401d14c15c1a34674615dcffaa5b9f3371aba0ccfda&quot;
+}
+Request URI:	https://simple-books-api.click:443/api-clients
+Respuesta: {&quot;accessToken&quot;:&quot;58e7586b4064a38a89625d7bee32e27454de4b476be3c22a67a00d1215a38647&quot;}
+HTTP/1.1 400 Bad Request
 Content-Type: application/json
 Content-Length: 43
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 19:47:07 GMT
-X-Amzn-Trace-Id: Root=1-69c58d3b-230f4e7c3d83234d5ffb1342;Parent=355f6f824d8f4054;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: dc5d8a48-fa7a-4ea3-b5d1-158fee1c55f3
+Date: Thu, 26 Mar 2026 20:37:10 GMT
+X-Amzn-Trace-Id: Root=1-69c598f6-198e259041d8ddd253a9dd4c;Parent=2285f695944fbfd7;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 1b2540bb-1a1c-4602-b9c2-c459d70e70f5
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2MBWFnPoAMEqLQ=
+x-amz-apigw-id: a2TWjEoDoAMEAgQ=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 348d7c18d8ac60e3b6b1679992a9f608.cloudfront.net (CloudFront)
+Via: 1.1 eaa8527bd6db15317a1490e92fd0c428.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: dlDcctMsLkLa5v56asC-wb0NQRLk_2mUNa_jWojy0VBcc-BH-ah5tA==
+X-Amz-Cf-Id: lOxPog0K1moPzdvtKtbqu-FJbKL0KAOTcfIev71PtoQNkK0HIU003A==
 
 {
     &quot;error&quot;: &quot;Invalid or missing client name.&quot;
@@ -218,17 +143,17 @@ HTTP/1.1 400 Bad Request
 Content-Type: application/json
 Content-Length: 44
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 19:47:07 GMT
-X-Amzn-Trace-Id: Root=1-69c58d3b-7bb6fda50950845a5b0edf94;Parent=391cfe636f16c674;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 5ac3d116-679a-43bb-851a-93d8b4ae9913
+Date: Thu, 26 Mar 2026 20:37:10 GMT
+X-Amzn-Trace-Id: Root=1-69c598f6-3d53109b0e4b90bb36dadb79;Parent=2b7d8e74a4203cfd;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 168faeb3-5300-470f-88ee-d6396a72273f
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2MBYGtxIAMEfow=
+x-amz-apigw-id: a2TWlF04IAMEqLQ=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 1a8f4e7ec86ac95ada5cd8e1bafd669e.cloudfront.net (CloudFront)
+Via: 1.1 08a337d4c41835bb1a388ee0311fd0aa.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: pGb-jZo1W6WTm9YfxhmEZ3seOF8LF6RdyNC_IQtE4T_vlIN5UzG2JQ==
+X-Amz-Cf-Id: 0uj69RzFHQKell6Hqa5mTYdYUKkyzYY4sUD3BrwggQPK5an43ewKOA==
 
 {
     &quot;error&quot;: &quot;Invalid or missing client email.&quot;
@@ -245,7 +170,7 @@ X-Amz-Cf-Id: pGb-jZo1W6WTm9YfxhmEZ3seOF8LF6RdyNC_IQtE4T_vlIN5UzG2JQ==
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.1.0</a> at 26 mar. 2026 2:47:14 p. m.</p>
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at 26 mar. 2026 3:37:17 p. m.</p>
 </div>
 </div>
 </body>
