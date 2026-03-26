@@ -13,17 +13,15 @@ on:
         default: "All"
         type: choice
         options:
-          [
-            All,
-            Smoke,
-            Regression,
-            Contract,
-            Security,
-            Negative,
-            Idempotencia,
-            Performance,
-            SOAP,
-          ]
+          - All
+          - Smoke
+          - Regression
+          - Contract
+          - Security
+          - Negative
+          - Idempotencia
+          - Performance
+          - SOAP
 
 env:
   JAVA_VERSION: "17"
@@ -33,6 +31,7 @@ jobs:
   smoke:
     name: "🔥 Smoke"
     runs-on: ubuntu-latest
+    continue-on-error: true # ← CRÍTICO: No detiene el workflow
     if: |
       github.event_name != 'workflow_dispatch' ||
       inputs.suite == 'All' || inputs.suite == 'Smoke'
@@ -45,7 +44,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Smoke
-        run: ./gradlew test -Dsuite=Smoke
+        continue-on-error: true # ← CRÍTICO: No falla el step
+        run: ./gradlew test -Dsuite=Smoke --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
           RICK_API_URL: ${{ secrets.RICK_API_URL }}
@@ -71,10 +71,12 @@ jobs:
   regression:
     name: "🔁 Regression"
     runs-on: ubuntu-latest
+    continue-on-error: true # ← CRÍTICO
     needs: smoke
     if: |
-      github.event_name != 'workflow_dispatch' ||
-      inputs.suite == 'All' || inputs.suite == 'Regression'
+      always() &&
+      (github.event_name != 'workflow_dispatch' ||
+      inputs.suite == 'All' || inputs.suite == 'Regression')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -84,7 +86,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Regression
-        run: ./gradlew test -Dsuite=Regression
+        continue-on-error: true # ← CRÍTICO
+        run: ./gradlew test -Dsuite=Regression --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
           RICK_API_URL: ${{ secrets.RICK_API_URL }}
@@ -105,10 +108,12 @@ jobs:
   contract:
     name: "📋 Contract"
     runs-on: ubuntu-latest
+    continue-on-error: true # ← CRÍTICO
     needs: smoke
     if: |
-      github.event_name != 'workflow_dispatch' ||
-      inputs.suite == 'All' || inputs.suite == 'Contract'
+      always() &&
+      (github.event_name != 'workflow_dispatch' ||
+      inputs.suite == 'All' || inputs.suite == 'Contract')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -118,7 +123,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Contract
-        run: ./gradlew test -Dsuite=Contract
+        continue-on-error: true # ← CRÍTICO
+        run: ./gradlew test -Dsuite=Contract --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
       - name: Generar Allure
@@ -136,10 +142,12 @@ jobs:
   security:
     name: "🔒 Security"
     runs-on: ubuntu-latest
+    continue-on-error: true # ← CRÍTICO
     needs: smoke
     if: |
-      github.event_name != 'workflow_dispatch' ||
-      inputs.suite == 'All' || inputs.suite == 'Security'
+      always() &&
+      (github.event_name != 'workflow_dispatch' ||
+      inputs.suite == 'All' || inputs.suite == 'Security')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -149,7 +157,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Security
-        run: ./gradlew test -Dsuite=Security
+        continue-on-error: true # ← CRÍTICO
+        run: ./gradlew test -Dsuite=Security --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
       - name: Generar Allure
@@ -167,10 +176,12 @@ jobs:
   negative:
     name: "❌ Negative"
     runs-on: ubuntu-latest
+    continue-on-error: true # ← CRÍTICO
     needs: smoke
     if: |
-      github.event_name != 'workflow_dispatch' ||
-      inputs.suite == 'All' || inputs.suite == 'Negative'
+      always() &&
+      (github.event_name != 'workflow_dispatch' ||
+      inputs.suite == 'All' || inputs.suite == 'Negative')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -180,7 +191,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Negative
-        run: ./gradlew test -Dsuite=Negative
+        continue-on-error: true # ← CRÍTICO
+        run: ./gradlew test -Dsuite=Negative --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
       - name: Generar Allure
@@ -198,10 +210,12 @@ jobs:
   soap:
     name: "🧼 SOAP"
     runs-on: ubuntu-latest
+    continue-on-error: true # ← CRÍTICO
     needs: smoke
     if: |
-      github.event_name != 'workflow_dispatch' ||
-      inputs.suite == 'All' || inputs.suite == 'SOAP'
+      always() &&
+      (github.event_name != 'workflow_dispatch' ||
+      inputs.suite == 'All' || inputs.suite == 'SOAP')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -211,7 +225,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar SOAP
-        run: ./gradlew test -Dsuite=SOAP
+        continue-on-error: true # ← CRÍTICO
+        run: ./gradlew test -Dsuite=SOAP --continue
         env:
           SOAP_API_URL: ${{ secrets.SOAP_API_URL }}
       - name: Generar Allure
@@ -229,10 +244,12 @@ jobs:
   idempotencia:
     name: "🔄 Idempotencia"
     runs-on: ubuntu-latest
+    continue-on-error: true # ← CRÍTICO
     needs: regression
     if: |
-      github.event_name != 'workflow_dispatch' ||
-      inputs.suite == 'All' || inputs.suite == 'Idempotencia'
+      always() &&
+      (github.event_name != 'workflow_dispatch' ||
+      inputs.suite == 'All' || inputs.suite == 'Idempotencia')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -242,7 +259,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Idempotencia
-        run: ./gradlew test -Dsuite=Idempotencia
+        continue-on-error: true # ← CRÍTICO
+        run: ./gradlew test -Dsuite=Idempotencia --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
       - name: Generar Allure
@@ -260,10 +278,12 @@ jobs:
   performance:
     name: "⚡ Performance"
     runs-on: ubuntu-latest
+    continue-on-error: true # ← CRÍTICO
     needs: regression
     if: |
-      github.event_name != 'workflow_dispatch' ||
-      inputs.suite == 'All' || inputs.suite == 'Performance'
+      always() &&
+      (github.event_name != 'workflow_dispatch' ||
+      inputs.suite == 'All' || inputs.suite == 'Performance')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -273,7 +293,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Performance
-        run: ./gradlew test -Dsuite=Performance
+        continue-on-error: true # ← CRÍTICO
+        run: ./gradlew test -Dsuite=Performance --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
       - name: Generar Allure

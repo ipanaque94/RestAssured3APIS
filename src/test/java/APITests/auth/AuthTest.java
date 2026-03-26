@@ -8,7 +8,6 @@ import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 
 import APITests.baseUrl.BaseBooksTest;
-import APITests.utils.Config;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;

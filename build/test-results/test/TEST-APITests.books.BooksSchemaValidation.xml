@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.books.BooksSchemaValidation" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-26T20:36:57.992Z" hostname="DESKTOP-IOAC1DS" time="10.88">
+<testsuite name="APITests.books.BooksSchemaValidation" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-26T21:06:07.772Z" hostname="DESKTOP-IOAC1DS" time="13.232">
   <properties/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="1.714"/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.416"/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.235"/>
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="2.733"/>
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.402"/>
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.194"/>
   <system-out><![CDATA[Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"91845da81ce78496d6c9bd0b57e7b45b45eb3b71958ee4f427507b2a50051254"}
+Respuesta: {"accessToken":"129ef719a308c1f39f0413bb7b223417fa678eb9dc6a2aa553771ddf85502ad1"}
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 417
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 20:36:57 GMT
-X-Amzn-Trace-Id: Root=1-69c598e9-6070636d4d08571d41599bc8;Parent=6d4973817face9da;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: e9222868-8a34-4c32-9376-e32f0fe753f6
+Date: Thu, 26 Mar 2026 21:06:07 GMT
+X-Amzn-Trace-Id: Root=1-69c59fbf-3f5f4da63e636ef658de1125;Parent=6d115a3fef18eeee;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 080a9269-4824-4333-a587-e1d6087370a4
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2TUkHVHIAMEjrg=
+x-amz-apigw-id: a2Xl-GeCIAMEubw=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 2b3f3fcac6b134b7a6d679485a9458b4.cloudfront.net (CloudFront)
+Via: 1.1 f3945d74e32166b166de943713d94838.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: aHJI1GtFXkf6NqIPBsLIFytpIUBgBuf3OetQ8Aq9WUa17G9me5GYxA==
+X-Amz-Cf-Id: cQQl1-V8GrnUIQ9ByXZG7PHbilA6uoR7Q3r-N4ipxGWqzYv2oNAMgA==
 
 [
     {
@@ -61,22 +61,22 @@ X-Amz-Cf-Id: aHJI1GtFXkf6NqIPBsLIFytpIUBgBuf3OetQ8Aq9WUa17G9me5GYxA==
     }
 ]
 Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"96b20959a64cbcc37cca9b13f630f425f1c9e089660c62f88200c39613a9d361"}
+Respuesta: {"accessToken":"1be22ba93144b3471adb58e330627ecaef0fe0db1db2e04ea9cfad8daf370817"}
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 417
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 20:37:05 GMT
-X-Amzn-Trace-Id: Root=1-69c598f1-12bb69ea22cf48f53f06b233;Parent=098e93e4323c8a87;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 93ff4226-591a-4be2-a3e1-4232f642d133
+Date: Thu, 26 Mar 2026 21:06:17 GMT
+X-Amzn-Trace-Id: Root=1-69c59fc9-0b286874296ac8900ff682fd;Parent=38a4d149abfb6c1b;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: eb525068-34c8-470f-9e8d-aca4d3e7c0ff
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2TVyEg1oAMEB1g=
+x-amz-apigw-id: a2XniFR-IAMERdA=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 ac7fd017999b6d571e9b83857fbce978.cloudfront.net (CloudFront)
+Via: 1.1 646918d972593b8541919a1f9825d242.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: dKLhAwZdphAGmb8m__kP7yoGu5EsD9U_4dsS4OBodq_zGxBqiKLk3Q==
+X-Amz-Cf-Id: KRcd0SekQGXhxz48RR8WERX-XnaYLrQwmj8t_o1342frC2sNxOqaCg==
 
 [
     {
@@ -117,22 +117,22 @@ X-Amz-Cf-Id: dKLhAwZdphAGmb8m__kP7yoGu5EsD9U_4dsS4OBodq_zGxBqiKLk3Q==
     }
 ]
 Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"2f7ccdcd1ca882c596456ce22f5e2ac07ae32f4b4be0f7783b5d3aaa51856962"}
+Respuesta: {"accessToken":"880207cf011d63e45caebe0cd3dc08b3af3d6fbb7844467e1121961e6356d219"}
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 417
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 20:37:08 GMT
-X-Amzn-Trace-Id: Root=1-69c598f4-41e405165ee4419206875315;Parent=16612857e45b0203;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 52541b7b-9483-430d-bfe2-9da718ce2d9b
+Date: Thu, 26 Mar 2026 21:06:20 GMT
+X-Amzn-Trace-Id: Root=1-69c59fcc-24ef9eab07bb125e75b0b7d5;Parent=53154830c58a2c3b;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 14d46070-4614-409c-9fb7-c963e02637fd
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2TWOEVMoAMEI8A=
+x-amz-apigw-id: a2XoAE6FoAMEgJQ=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 2420b43d96bd040d43ee898a9214ab8a.cloudfront.net (CloudFront)
+Via: 1.1 fa8b0effa6df576b1019d4a3c72e50c6.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: 2o_-pA6XctoWBEy7nnt2QJXuRPlQ2tgwAg1kqcdmfX4k5UmDMWzfeg==
+X-Amz-Cf-Id: 3PyrUVeg7WloQnp-FpuC9sv0qmAtC3ztXSwiYOiKpQenFUWYlNnAIA==
 
 [
     {
