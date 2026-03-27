@@ -14,19 +14,21 @@ public class BaseBooksTest {
 
     protected static RequestSpecification spec;
 
+    private static boolean initialized = false;
+
     @BeforeClass(alwaysRun = true)
     public synchronized void setup() {
-
-        if (spec == null) {
+        if (!initialized) {
             RestAssured.baseURI = Config.get("books.api.url");
             RestAssured.useRelaxedHTTPSValidation();
+
             spec = new RequestSpecBuilder()
                     .addHeader("Content-Type", "application/json")
                     .addHeader("Accept", "application/json")
                     .build();
-        }
-        if (token == null) {
+
             token = obtenerToken();
+            initialized = true;
         }
     }
 

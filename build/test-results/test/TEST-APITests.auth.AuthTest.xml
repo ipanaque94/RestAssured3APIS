@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.auth.AuthTest" tests="3" skipped="0" failures="2" errors="0" timestamp="2026-03-27T18:43:01.895Z" hostname="DESKTOP-IOAC1DS" time="15.823">
+<testsuite name="APITests.auth.AuthTest" tests="3" skipped="0" failures="2" errors="0" timestamp="2026-03-27T21:16:11.558Z" hostname="DESKTOP-IOAC1DS" time="17.535">
   <properties/>
-  <testcase name="registroExitosoRetorna201ConToken" classname="APITests.auth.AuthTest" time="0.662"/>
-  <testcase name="validarCuerpoVacioRetorna400" classname="APITests.auth.AuthTest" time="0.392">
+  <testcase name="registroExitosoRetorna201ConToken" classname="APITests.auth.AuthTest" time="0.814"/>
+  <testcase name="validarCuerpoVacioRetorna400" classname="APITests.auth.AuthTest" time="0.417">
     <failure message="java.lang.AssertionError: 1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
 Expected status code &lt;400&gt; but was &lt;404&gt;.
 
@@ -80,7 +80,7 @@ Expected status code &lt;400&gt; but was &lt;404&gt;.
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="validarSoloNombreRetorna400" classname="APITests.auth.AuthTest" time="0.362">
+  <testcase name="validarSoloNombreRetorna400" classname="APITests.auth.AuthTest" time="0.911">
     <failure message="java.lang.AssertionError: 1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
 Expected status code &lt;400&gt; but was &lt;404&gt;.
 
@@ -156,26 +156,25 @@ Expected status code &lt;400&gt; but was &lt;404&gt;.
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[Request URI:	https://simple-books-api.click/api-clients
-Respuesta: {"accessToken":"3750c94541f7089eb30774dd6ad31aafbaa3d9095e75a0f20e3bd723b37b8680"}
+  <system-out><![CDATA[obtenerToken intento 1 | status: 201 | body: {"accessToken":"7204b916bc35ad563b0592b0a0186921db1098014a3c9486c6d3676592ffb244"}
 HTTP/1.1 201 Created
 Content-Type: application/json
 Content-Length: 82
 Connection: keep-alive
-Date: Fri, 27 Mar 2026 18:43:04 GMT
-X-Amzn-Trace-Id: Root=1-69c6cfb8-7a5397ea23f2b61b2dd498e2;Parent=3d8f1c47db71fad8;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 353c1f9e-afe0-4534-b6bf-21ce428e24da
+Date: Fri, 27 Mar 2026 21:16:13 GMT
+X-Amzn-Trace-Id: Root=1-69c6f39d-0a2851315610ddfb46f91c8c;Parent=64170a70159f0e70;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: b3b34681-77a4-40c2-ab59-1278b5b44e90
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a5Vk3HcBoAMEfEg=
+x-amz-apigw-id: a5sAuEaZoAMEc5Q=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 f3945d74e32166b166de943713d94838.cloudfront.net (CloudFront)
+Via: 1.1 4b41c6e76d8872ab0e8baee30184397a.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: UPFydCJKXUV87soKrrnmhXzzqA8WFKkbrbAesgqUHaeB148uJh1e5g==
+X-Amz-Cf-Id: -CoA23kWhW9CSxNXB4451jvCfBK6xiSWfMN_V0MuZp_lZmfoMSZKog==
 
 {
-    "accessToken": "809d96d4a2a666d6f21ab9a3e00a1f69f25bef0e094069ccdf29f069dc1b1aac"
+    "accessToken": "e13bcde997fca7a2f32becb3659a5e08d075c5de620913ab3d5c4999bac5334c"
 }
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

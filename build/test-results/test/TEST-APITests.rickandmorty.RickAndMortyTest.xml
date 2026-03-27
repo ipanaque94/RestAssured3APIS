@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.rickandmorty.RickAndMortyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-03-27T18:43:05.799Z" hostname="DESKTOP-IOAC1DS" time="8.416">
+<testsuite name="APITests.rickandmorty.RickAndMortyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-03-27T21:16:16.346Z" hostname="DESKTOP-IOAC1DS" time="8.311">
   <properties/>
-  <testcase name="testGetPersonajeRick" classname="APITests.rickandmorty.RickAndMortyTest" time="0.483"/>
+  <testcase name="testGetPersonajeRick" classname="APITests.rickandmorty.RickAndMortyTest" time="0.486"/>
   <testcase name="testValidarCamposAnidadosConJsonPath" classname="APITests.rickandmorty.RickAndMortyTest" time="0.304"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

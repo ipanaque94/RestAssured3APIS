@@ -22,12 +22,11 @@ public class AuthTest extends BaseBooksTest {
     @Test(groups = { "Auth", "Negative" })
     public void validarCuerpoVacioRetorna400() {
         given()
-                .header("Content-Type", "application/json")
+                .spec(spec)
                 .body("{}")
                 .when()
                 .post("/api-clients")
                 .then()
-                .assertThat()
                 .statusCode(400)
                 .body("error", equalTo("Invalid or missing client name."))
                 .log().all();
