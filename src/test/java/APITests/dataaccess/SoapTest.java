@@ -5,21 +5,21 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import APITests.baseUrl.BaseDataAcceess;
 
-public class SoapTest {
+import static io.restassured.RestAssured.given;
+
+public class SoapTest extends BaseDataAcceess {
 
     @Severity(SeverityLevel.NORMAL)
-    @Description("POST SOAP NumberToWords con ubiNum=500 debe retornar 'five hundred' en la respuesta XML")
+    @Description("POST SOAP NumberToWords con ubiNum=500 debe retornar 'five hundred'")
     @Story("Conversión de número a palabras")
     @Owner("Enoc Ipanaque")
     @Test(groups = { "SOAP", "Smoke" })
     public void testNumeroApalabras500() {
-        String endpoint = "http://www.dataaccess.com/webservicesserver/numberConversion.wso";
 
         String soapBody = """
                 <?xml version="1.0" encoding="utf-8"?>
@@ -32,27 +32,22 @@ public class SoapTest {
                 </soap:Envelope>
                 """;
 
-        try {
-            Response response = RestAssured.given()
-                    .contentType("text/xml; charset=UTF-8")
-                    .header("SOAPAction", "")
-                    .body(soapBody)
-                    .relaxedHTTPSValidation() // ← Ignorar SSL
-                    .when()
-                    .post(endpoint);
+        Response response = given()
+                .spec(spec)
+                .body(soapBody)
+                .when()
+                .post("https://www.dataaccess.com/webservicesserver/numberconversion.wso");
 
-            Assert.assertEquals(response.getStatusCode(), 200,
-                    "Status code incorrecto. Response: " + response.asString());
+        System.out.println("Status: " + response.statusCode());
+        System.out.println("Body: " + response.asString());
 
-            String numberInWords = response.xmlPath()
-                    .getString("//*[local-name()='NumberToWordsResult']")
-                    .trim();
+        Assert.assertEquals(response.statusCode(), 200,
+                "Status incorrecto. Response: " + response.asString());
 
-            Assert.assertEquals(numberInWords, "five hundred",
-                    "Número convertido incorrecto");
+        String result = response.xmlPath()
+                .getString("//*[local-name()='NumberToWordsResult']")
+                .trim();
 
-        } catch (Exception e) {
-            Assert.fail("Test SOAP falló debido a: " + e.getMessage());
-        }
+        Assert.assertEquals(result, "five hundred");
     }
 }

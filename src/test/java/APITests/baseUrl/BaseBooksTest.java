@@ -17,7 +17,6 @@ public class BaseBooksTest {
     @BeforeClass(alwaysRun = true)
     public void setup() {
         RestAssured.baseURI = Config.get("books.api.url");
-        RestAssured.port = 443;
         RestAssured.useRelaxedHTTPSValidation();
 
         spec = new RequestSpecBuilder()
