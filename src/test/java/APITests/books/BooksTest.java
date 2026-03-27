@@ -8,6 +8,8 @@ import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import APITests.baseUrl.BaseBooksTest;
 
@@ -17,12 +19,15 @@ import static org.hamcrest.Matchers.lessThan;
 
 public class BooksTest extends BaseBooksTest {
 
+    private static final Logger log = LoggerFactory.getLogger(BooksTest.class);
+
     @Severity(SeverityLevel.BLOCKER)
     @Description("GET /books debe retornar status 200")
     @Story("Listado de libros")
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Books", "Smoke", "Regression" })
     public void validarStatusCode200Books() {
+        log.info("Iniciando test: validarStatusCode200Books");
         given()
                 .spec(spec)
                 .when()
@@ -30,7 +35,9 @@ public class BooksTest extends BaseBooksTest {
                 .then()
                 .log().all()
                 .assertThat()
+                .log().ifError()
                 .statusCode(200);
+        log.info("Test completado exitosamente");
     }
 
     @Severity(SeverityLevel.MINOR)

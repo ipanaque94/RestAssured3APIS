@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.books.OrdersTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-27T15:18:30.376Z" hostname="DESKTOP-IOAC1DS" time="13.087">
+<testsuite name="APITests.books.OrdersTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-27T18:43:03.233Z" hostname="DESKTOP-IOAC1DS" time="15.304">
   <properties/>
-  <testcase name="listarOrdenes" classname="APITests.books.OrdersTest" time="0.31"/>
-  <testcase name="crearOrden" classname="APITests.books.OrdersTest" time="0.522"/>
-  <testcase name="listarOrdenes" classname="APITests.books.OrdersTest" time="0.194"/>
-  <testcase name="validarStatusCode401TokenInvalidoEnPost" classname="APITests.books.OrdersTest" time="0.187"/>
-  <testcase name="validarStatusCode400CuandoCuerpoEsInvalido" classname="APITests.books.OrdersTest" time="0.178"/>
-  <testcase name="validarStatusCode401TokenInvalidoEnPost" classname="APITests.books.OrdersTest" time="0.175"/>
+  <testcase name="listarOrdenes" classname="APITests.books.OrdersTest" time="0.252"/>
+  <testcase name="crearOrden" classname="APITests.books.OrdersTest" time="0.616"/>
+  <testcase name="listarOrdenes" classname="APITests.books.OrdersTest" time="0.246"/>
+  <testcase name="validarStatusCode401TokenInvalidoEnPost" classname="APITests.books.OrdersTest" time="0.194"/>
+  <testcase name="validarStatusCode400CuandoCuerpoEsInvalido" classname="APITests.books.OrdersTest" time="0.232"/>
+  <testcase name="validarStatusCode401TokenInvalidoEnPost" classname="APITests.books.OrdersTest" time="0.306"/>
   <system-out><![CDATA[HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 2
 Connection: keep-alive
-Date: Fri, 27 Mar 2026 15:18:33 GMT
-X-Amzn-Trace-Id: Root=1-69c69fc9-2d518bc212d20ce50f33f0b0;Parent=6fab6bacb79ea7b1;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 7a36f413-3cfc-4158-8f35-5c667ad26f5a
+Date: Fri, 27 Mar 2026 18:43:05 GMT
+X-Amzn-Trace-Id: Root=1-69c6cfb9-5bd2e02e7db9ca1208dcedf0;Parent=2bfddf1d1108301a;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: ce283170-f694-42c1-a694-f6dbc1b37268
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a43neE8roAMEEYQ=
+x-amz-apigw-id: a5VlDHiOoAMEWIQ=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 0c01d38ad30ed044208dca6e71febecc.cloudfront.net (CloudFront)
+Via: 1.1 722f597c84cab93cda2bd93b0200150c.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: iNVMsabnXKFeCb5YtGFgbnbkizOeyochwVOnKCPGfCoBsd6m89A6Wg==
+X-Amz-Cf-Id: 5hHdLX3Ck1qWwzIQQVFm9TvsgQa_CLas4OjfjJttYtQoQAOoSIMLxA==
 
 [
     
@@ -30,63 +30,63 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 Content-Length: 50
 Connection: keep-alive
-Date: Fri, 27 Mar 2026 15:18:39 GMT
-X-Amzn-Trace-Id: Root=1-69c69fcf-16003b906dcd709d4e5a9ebb;Parent=2fe18027ee8985ba;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 20b8c7b5-0581-40b5-b23c-12f8e8436284
+Date: Fri, 27 Mar 2026 18:43:13 GMT
+X-Amzn-Trace-Id: Root=1-69c6cfc1-1720fcd46300fc611b2850fd;Parent=03181358ba71d619;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: e6db9928-e5f7-4356-ac6d-ce6382711ac5
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a43odHhJIAMEGEA=
+x-amz-apigw-id: a5VmRHUUoAMEEMw=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 ac7fd017999b6d571e9b83857fbce978.cloudfront.net (CloudFront)
+Via: 1.1 3e07b77de077db959f12788b2ecb8914.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: fT6Fsq_u2oM6vAVyIjdsDOT8OoNghbe7QpsxqlxYcTub9cXbVmWkDQ==
+X-Amz-Cf-Id: kLPDNdKGWfwiXG0F1-vKrOxRBjkC25p3x31wg8TCMaNYtPym7f-SnQ==
 
 {
     "created": true,
-    "orderId": "3BrprBF6k99eHwRIqa1bq"
+    "orderId": "bA4ixaLZCyOSfVkStA3IM"
 }
-Order ID creado: 3BrprBF6k99eHwRIqa1bq
+Order ID creado: bA4ixaLZCyOSfVkStA3IM
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 104
 Connection: keep-alive
-Date: Fri, 27 Mar 2026 15:18:39 GMT
-X-Amzn-Trace-Id: Root=1-69c69fcf-442d8b34712e096b4329c6e1;Parent=7cbc44b52e788df0;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: cd3e1e9e-c94f-440b-a266-3fb40f4564b8
+Date: Fri, 27 Mar 2026 18:43:13 GMT
+X-Amzn-Trace-Id: Root=1-69c6cfc1-1cfb49dd3a1ed8c316e7bc0a;Parent=6f37dc7603a9203c;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 15fb623d-0a61-4fab-b632-319a1c94f058
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a43ogEjZIAMEcWA=
+x-amz-apigw-id: a5VmVEC_oAMEKxw=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 9eef4fd78707b607b9d2cf6666c4603a.cloudfront.net (CloudFront)
+Via: 1.1 c5d20cc2f3b2ec11dc31e9645834ece2.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: R9kHQl6QUEGa2xe7shZznpDK1nlN4r2Sp6nrTQStJi8BB__-Wf5ERA==
+X-Amz-Cf-Id: 1B2WIF65Ckd9r3PoU_AwxHmyk5OpzSaj99bwzRTLufBTr0xXDlM1Wg==
 
 [
     {
-        "id": "3BrprBF6k99eHwRIqa1bq",
+        "id": "bA4ixaLZCyOSfVkStA3IM",
         "bookId": 1,
         "customerName": "jhon",
         "quantity": 1,
-        "timestamp": 1774624719345
+        "timestamp": 1774636993351
     }
 ]
 HTTP/1.1 401 Unauthorized
 Content-Type: application/json
 Content-Length: 33
 Connection: keep-alive
-Date: Fri, 27 Mar 2026 15:18:44 GMT
-X-Amzn-Trace-Id: Root=1-69c69fd4-1700cd357f51f3e13722d59c;Parent=696ea037a8b65aa6;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: c1fd6163-7085-408b-bd10-ee15ce0b3cf1
+Date: Fri, 27 Mar 2026 18:43:18 GMT
+X-Amzn-Trace-Id: Root=1-69c6cfc6-2ae325df1bb78218614fec8d;Parent=2e6dd96f03a88b36;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 3b96022d-0ece-4a4e-a064-56689bb240cf
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a43pOEWZoAMErtw=
+x-amz-apigw-id: a5VnIE5qoAMEhmQ=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 eec3bf841ac636f9a2400eb19e13aac0.cloudfront.net (CloudFront)
+Via: 1.1 b1e437ee2260afd9c0785483f86b24ce.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: -YqQGeXyXWjyomjYtMJyEyA2pB9fWWgmbApA98VvBHFF7JgTdz1U4Q==
+X-Amz-Cf-Id: D__yQqDwdNoxjWoAqFXhJKtTYXCHb5zRHSJjYf1Q7TyYgNJh2e3TWA==
 
 {
     "error": "Invalid bearer token."
@@ -95,17 +95,17 @@ HTTP/1.1 400 Bad Request
 Content-Type: application/json
 Content-Length: 38
 Connection: keep-alive
-Date: Fri, 27 Mar 2026 15:18:45 GMT
-X-Amzn-Trace-Id: Root=1-69c69fd5-100791385468712a114893dd;Parent=1bed315590a2aff1;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 1d9abd4a-6a70-46cf-827d-dbcccdc0a4eb
+Date: Fri, 27 Mar 2026 18:43:20 GMT
+X-Amzn-Trace-Id: Root=1-69c6cfc8-67b1bf2b646de2a77a97c46a;Parent=3be360fb099afa6c;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: eaf7a01e-c175-4c7e-8695-267377d08117
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a43pcGFkIAMEMwQ=
+x-amz-apigw-id: a5VnXGJZoAMEQ4w=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 c5d20cc2f3b2ec11dc31e9645834ece2.cloudfront.net (CloudFront)
+Via: 1.1 2420b43d96bd040d43ee898a9214ab8a.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: l10Xk27dc3-ccL1JTy6TWfsZ_HMHmhKfOdgsLRiZfhcDXgAEzqnJRg==
+X-Amz-Cf-Id: 8XPUokQDeRLvSIHknyUW4KTctiGMJVoKsyFi9XFDVcEH2YlMEBUtBA==
 
 {
     "error": "Invalid or missing bookId."
@@ -114,17 +114,17 @@ HTTP/1.1 401 Unauthorized
 Content-Type: application/json
 Content-Length: 33
 Connection: keep-alive
-Date: Fri, 27 Mar 2026 15:18:45 GMT
-X-Amzn-Trace-Id: Root=1-69c69fd5-475242121ed9219501cfe2e8;Parent=3a9c795f7accad61;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: f282b2fb-6706-4450-a67d-8a99792d298d
+Date: Fri, 27 Mar 2026 18:43:20 GMT
+X-Amzn-Trace-Id: Root=1-69c6cfc8-6a9c4e240399f70a6c9b5297;Parent=5adff7586890b30d;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: ab474120-ccb8-4612-af34-03edb6af279b
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a43peHrVoAMELPw=
+x-amz-apigw-id: a5VnYHRJIAMEg-Q=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 2420b43d96bd040d43ee898a9214ab8a.cloudfront.net (CloudFront)
+Via: 1.1 f3945d74e32166b166de943713d94838.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: KiZYU9QWy-D2ufRWJCXXm8oTPgXBn6SMqTnskYeAqAEMZTKoFFm8RA==
+X-Amz-Cf-Id: srn-gc_urzLaIhSmshQuVfQBu4XhBhXM_xGx2u-4SL3cC3B0FoA79w==
 
 {
     "error": "Invalid bearer token."
