@@ -1,7 +1,6 @@
 package APITests.baseUrl;
 
 import static io.restassured.RestAssured.given;
-//import java.util.Random;
 import org.testng.annotations.BeforeClass;
 import APITests.utils.Config;
 import io.restassured.RestAssured;
@@ -11,48 +10,47 @@ import io.restassured.specification.RequestSpecification;
 public class BaseBooksTest {
 
     protected static String token;
-
     protected static RequestSpecification spec;
 
     @BeforeClass(alwaysRun = true)
-    public void setup() {
+    public synchronized void setup() {
+
         if (spec == null) {
             RestAssured.baseURI = Config.get("books.api.url");
             RestAssured.useRelaxedHTTPSValidation();
-
             spec = new RequestSpecBuilder()
                     .addHeader("Content-Type", "application/json")
                     .addHeader("Accept", "application/json")
                     .build();
         }
-
         if (token == null) {
             token = obtenerToken();
         }
     }
 
-    protected String obtenerToken() {
+    private String obtenerToken() {
         for (int i = 0; i < 3; i++) {
-            String email = generateRandomEmail();
 
+            String email = "user" + System.nanoTime() + "@mail.com";
             var response = given()
                     .spec(spec)
-                    .log().uri()
                     .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + email + "\"}")
                     .when()
                     .post("/api-clients");
-            System.out.println("Respuesta: " + response.asString());
+
+            System.out.println("obtenerToken intento " + (i + 1)
+                    + " | status: " + response.statusCode()
+                    + " | body: " + response.asString());
 
             if (response.statusCode() == 201) {
                 return response.path("accessToken");
-            } else {
-                System.out.println("Intento " + (i + 1) + " falló con status: " + response.statusCode());
+            }
+            // Pausa entre intentos para evitar rate limit
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ignored) {
             }
         }
-        throw new RuntimeException("No se pudo obtener token después de varios intentos");
-    }
-
-    protected String generateRandomEmail() {
-        return "user" + System.currentTimeMillis() + "@mail.com";
+        throw new RuntimeException("No se pudo obtener token después de 3 intentos");
     }
 }

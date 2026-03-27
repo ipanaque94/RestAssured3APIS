@@ -99,4 +99,20 @@ public class OrdersTest extends BaseBooksTest {
         };
     }
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("GET /orders con distintos tokens inválidos siempre debe retornar 401")
+    @Story("Seguridad y autenticación")
+    @Owner("Enoc Ipanaque")
+    @Test(dataProvider = "tokensInvalidos", groups = { "Orders", "Security", "Negative" })
+    public void validarTokensInvalidosEnGet(String tokenInvalido, int statusEsperado) {
+        given()
+                .spec(spec)
+                .header("Authorization", "Bearer " + tokenInvalido)
+                .when()
+                .get("/orders")
+                .then()
+                .statusCode(statusEsperado)
+                .log().all();
+    }
+
 }
