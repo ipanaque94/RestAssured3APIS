@@ -1,6 +1,7 @@
 package APITests.baseUrl;
 
 import static io.restassured.RestAssured.given;
+//import java.util.Random;
 import org.testng.annotations.BeforeClass;
 import APITests.utils.Config;
 import io.restassured.RestAssured;
@@ -10,6 +11,7 @@ import io.restassured.specification.RequestSpecification;
 public class BaseBooksTest {
 
     protected static String token;
+
     protected static RequestSpecification spec;
 
     @BeforeClass(alwaysRun = true)
@@ -31,10 +33,9 @@ public class BaseBooksTest {
     private String obtenerToken() {
         for (int i = 0; i < 3; i++) {
 
-            String email = "user" + System.nanoTime() + "@mail.com";
             var response = given()
                     .spec(spec)
-                    .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + email + "\"}")
+                    .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + generateRandomEmail() + "\"}")
                     .when()
                     .post("/api-clients");
 
@@ -52,5 +53,9 @@ public class BaseBooksTest {
             }
         }
         throw new RuntimeException("No se pudo obtener token después de 3 intentos");
+    }
+
+    protected String generateRandomEmail() {
+        return "user" + System.nanoTime() + "@mail.com";
     }
 }

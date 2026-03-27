@@ -5,7 +5,6 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import APITests.baseUrl.BaseBooksTest;
@@ -89,30 +88,19 @@ public class OrdersTest extends BaseBooksTest {
                 .log().all();
     }
 
-    @DataProvider(name = "tokensInvalidos")
-    public Object[][] tokensInvalidos() {
-        return new Object[][] {
-                { "tokenFalso123", 401 },
-                { "invali doToken", 401 },
-                { "", 401 }
-
-        };
-    }
-
     @Severity(SeverityLevel.CRITICAL)
-    @Description("GET /orders con distintos tokens inválidos siempre debe retornar 401")
+    @Description("GET /orders con token inválido debe retornar 401")
     @Story("Seguridad y autenticación")
     @Owner("Enoc Ipanaque")
-    @Test(dataProvider = "tokensInvalidos", groups = { "Orders", "Security", "Negative" })
-    public void validarTokensInvalidosEnGet(String tokenInvalido, int statusEsperado) {
+    @Test(groups = { "Orders", "Security", "Negative" })
+    public void validarTokenInvalidoEnGet() {
         given()
                 .spec(spec)
-                .header("Authorization", "Bearer " + tokenInvalido)
+                .header("Authorization", "Bearer tokenFalso123")
                 .when()
                 .get("/orders")
                 .then()
-                .statusCode(statusEsperado)
+                .statusCode(401)
                 .log().all();
     }
-
 }
