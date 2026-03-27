@@ -22,6 +22,10 @@ on:
           - Idempotencia
           - Performance
           - SOAP
+permissions:
+  contents: read
+  actions: write
+  checks: write
 
 env:
   JAVA_VERSION: "17"
@@ -31,7 +35,7 @@ jobs:
   smoke:
     name: "🔥 Smoke"
     runs-on: ubuntu-latest
-    continue-on-error: true # ← CRÍTICO: No detiene el workflow
+    continue-on-error: true
     if: |
       github.event_name != 'workflow_dispatch' ||
       inputs.suite == 'All' || inputs.suite == 'Smoke'
@@ -44,7 +48,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Smoke
-        continue-on-error: true # ← CRÍTICO: No falla el step
+        continue-on-error: true
         run: ./gradlew test -Dsuite=Smoke --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
@@ -71,7 +75,7 @@ jobs:
   regression:
     name: "🔁 Regression"
     runs-on: ubuntu-latest
-    continue-on-error: true # ← CRÍTICO
+    continue-on-error: true
     needs: smoke
     if: |
       always() &&
@@ -86,7 +90,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Regression
-        continue-on-error: true # ← CRÍTICO
+        continue-on-error: true
         run: ./gradlew test -Dsuite=Regression --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
@@ -108,7 +112,7 @@ jobs:
   contract:
     name: "📋 Contract"
     runs-on: ubuntu-latest
-    continue-on-error: true # ← CRÍTICO
+    continue-on-error: true
     needs: smoke
     if: |
       always() &&
@@ -123,7 +127,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Contract
-        continue-on-error: true # ← CRÍTICO
+        continue-on-error: true
         run: ./gradlew test -Dsuite=Contract --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
@@ -142,7 +146,7 @@ jobs:
   security:
     name: "🔒 Security"
     runs-on: ubuntu-latest
-    continue-on-error: true # ← CRÍTICO
+    continue-on-error: true
     needs: smoke
     if: |
       always() &&
@@ -157,7 +161,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Security
-        continue-on-error: true # ← CRÍTICO
+        continue-on-error: true
         run: ./gradlew test -Dsuite=Security --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
@@ -176,7 +180,7 @@ jobs:
   negative:
     name: "❌ Negative"
     runs-on: ubuntu-latest
-    continue-on-error: true # ← CRÍTICO
+    continue-on-error: true
     needs: smoke
     if: |
       always() &&
@@ -191,7 +195,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Negative
-        continue-on-error: true # ← CRÍTICO
+        continue-on-error: true
         run: ./gradlew test -Dsuite=Negative --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
@@ -210,7 +214,7 @@ jobs:
   soap:
     name: "🧼 SOAP"
     runs-on: ubuntu-latest
-    continue-on-error: true # ← CRÍTICO
+    continue-on-error: true
     needs: smoke
     if: |
       always() &&
@@ -225,7 +229,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar SOAP
-        continue-on-error: true # ← CRÍTICO
+        continue-on-error: true
         run: ./gradlew test -Dsuite=SOAP --continue
         env:
           SOAP_API_URL: ${{ secrets.SOAP_API_URL }}
@@ -244,7 +248,7 @@ jobs:
   idempotencia:
     name: "🔄 Idempotencia"
     runs-on: ubuntu-latest
-    continue-on-error: true # ← CRÍTICO
+    continue-on-error: true
     needs: regression
     if: |
       always() &&
@@ -278,7 +282,7 @@ jobs:
   performance:
     name: "⚡ Performance"
     runs-on: ubuntu-latest
-    continue-on-error: true # ← CRÍTICO
+    continue-on-error: true
     needs: regression
     if: |
       always() &&
@@ -293,7 +297,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Performance
-        continue-on-error: true # ← CRÍTICO
+        continue-on-error: true
         run: ./gradlew test -Dsuite=Performance --continue
         env:
           BOOKS_API_URL: ${{ secrets.BOOKS_API_URL }}
