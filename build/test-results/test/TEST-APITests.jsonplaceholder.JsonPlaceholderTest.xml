@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.jsonplaceholder.JsonPlaceholderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-03-26T21:06:11.225Z" hostname="DESKTOP-IOAC1DS" time="8.909">
+<testsuite name="APITests.jsonplaceholder.JsonPlaceholderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-03-27T15:18:33.469Z" hostname="DESKTOP-IOAC1DS" time="7.61">
   <properties/>
-  <testcase name="testGetPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.344"/>
-  <testcase name="testActualizarPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.405"/>
-  <testcase name="testCrearPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.427"/>
-  <testcase name="testEliminarPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.402"/>
-  <testcase name="testGetUserYValidarCampos" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.345"/>
+  <testcase name="testGetPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.275"/>
+  <testcase name="testActualizarPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.408"/>
+  <testcase name="testCrearPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.481"/>
+  <testcase name="testEliminarPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.367"/>
+  <testcase name="testGetUserYValidarCampos" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.413"/>
   <system-out><![CDATA[Name: Leanne Graham
 Username: Bret
 Email: Sincere@april.biz

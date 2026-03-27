@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.books.IdempotenciaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-26T21:06:16.089Z" hostname="DESKTOP-IOAC1DS" time="10.515">
+<testsuite name="APITests.books.IdempotenciaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-27T15:18:37.311Z" hostname="DESKTOP-IOAC1DS" time="7.553">
   <properties/>
-  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.621"/>
-  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.574"/>
-  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.576"/>
-  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.635"/>
-  <system-out><![CDATA[Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"ba300f4d67c90a42f5c4d1c3abcfa84eb63153d5ea1486970cd88d0668a7a339"}
-Order creada para DELETE: gKo52UvyS2W59ENoTqLyN
-Order creada para PATCH: 3NAj9BAXGAJVD_JFGNq7R
-Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"4f2a86dc1b86d4653f0b0633083717aa6c3865d0cffafad3ea591b602f71d682"}
-Order creada para DELETE: jboEWc1o3TK0je_6p8-xt
-Order creada para PATCH: lu9In4SmNzCaYugs7J_Hw
+  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.578"/>
+  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.609"/>
+  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.578"/>
+  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.587"/>
+  <system-out><![CDATA[Order creada para DELETE: W-g_Usws7no_0PzzLXCco
+Order creada para PATCH: mbBS1r5YBxoyew3A_fuNK
+Order creada para DELETE: tVeQG2ojrRgjV9_sUOi4F
+Order creada para PATCH: aguHe-xA5qL-j114a0Zfc
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

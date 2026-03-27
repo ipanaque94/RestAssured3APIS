@@ -10,24 +10,27 @@ import io.restassured.specification.RequestSpecification;
 
 public class BaseBooksTest {
 
-    protected String token;
+    protected static String token;
 
-    protected RequestSpecification spec;
+    protected static RequestSpecification spec;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        RestAssured.baseURI = Config.get("books.api.url");
-        RestAssured.useRelaxedHTTPSValidation();
+        if (spec == null) {
+            RestAssured.baseURI = Config.get("books.api.url");
+            RestAssured.useRelaxedHTTPSValidation();
 
-        spec = new RequestSpecBuilder()
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
+            spec = new RequestSpecBuilder()
+                    .addHeader("Content-Type", "application/json")
+                    .addHeader("Accept", "application/json")
+                    .build();
+        }
 
-        token = obtenerToken();
+        if (token == null) {
+            token = obtenerToken();
+        }
     }
 
-    //
     protected String obtenerToken() {
         for (int i = 0; i < 3; i++) {
             String email = generateRandomEmail();

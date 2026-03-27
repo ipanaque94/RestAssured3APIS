@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.books.BooksSchemaValidation" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-26T21:06:07.772Z" hostname="DESKTOP-IOAC1DS" time="13.232">
+<testsuite name="APITests.books.BooksSchemaValidation" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-27T15:18:30.745Z" hostname="DESKTOP-IOAC1DS" time="10.822">
   <properties/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="2.733"/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.402"/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.194"/>
-  <system-out><![CDATA[Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"129ef719a308c1f39f0413bb7b223417fa678eb9dc6a2aa553771ddf85502ad1"}
-HTTP/1.1 200 OK
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="2.23"/>
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.198"/>
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.189"/>
+  <system-out><![CDATA[HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 417
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 21:06:07 GMT
-X-Amzn-Trace-Id: Root=1-69c59fbf-3f5f4da63e636ef658de1125;Parent=6d115a3fef18eeee;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 080a9269-4824-4333-a587-e1d6087370a4
+Date: Fri, 27 Mar 2026 15:18:33 GMT
+X-Amzn-Trace-Id: Root=1-69c69fc9-047d864363fd7ef1362eb3a2;Parent=204aa8fdf1899572;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: e758c686-3385-4bdf-8323-6eb5da828e4e
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2Xl-GeCIAMEubw=
+x-amz-apigw-id: a43nhGAJIAMEMdw=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 f3945d74e32166b166de943713d94838.cloudfront.net (CloudFront)
+Via: 1.1 722f597c84cab93cda2bd93b0200150c.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: cQQl1-V8GrnUIQ9ByXZG7PHbilA6uoR7Q3r-N4ipxGWqzYv2oNAMgA==
+X-Amz-Cf-Id: 5oNrBoBJltSMvJQ9D2OcYxrhbEQnIC8ObQ5YRnCZv_B9zvJv1U7OFw==
 
 [
     {
@@ -60,79 +58,75 @@ X-Amz-Cf-Id: cQQl1-V8GrnUIQ9ByXZG7PHbilA6uoR7Q3r-N4ipxGWqzYv2oNAMgA==
         "available": true
     }
 ]
-Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"1be22ba93144b3471adb58e330627ecaef0fe0db1db2e04ea9cfad8daf370817"}
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 417
 Connection: keep-alive
-Date: Thu, 26 Mar 2026 21:06:17 GMT
-X-Amzn-Trace-Id: Root=1-69c59fc9-0b286874296ac8900ff682fd;Parent=38a4d149abfb6c1b;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: eb525068-34c8-470f-9e8d-aca4d3e7c0ff
+Date: Fri, 27 Mar 2026 15:18:41 GMT
+X-Amzn-Trace-Id: Root=1-69c69fd1-661f4cde1c001dc5111f427e;Parent=116ac20336af1f6a;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: a6dae78c-501e-479d-986e-211fdd5ad098
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2XniFR-IAMERdA=
-Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
-X-Cache: Miss from cloudfront
-Via: 1.1 646918d972593b8541919a1f9825d242.cloudfront.net (CloudFront)
-X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: KRcd0SekQGXhxz48RR8WERX-XnaYLrQwmj8t_o1342frC2sNxOqaCg==
-
-[
-    {
-        "id": 1,
-        "name": "The Russian",
-        "type": "fiction",
-        "available": true
-    },
-    {
-        "id": 3,
-        "name": "The Vanishing Half",
-        "type": "fiction",
-        "available": true
-    },
-    {
-        "id": 4,
-        "name": "The Midnight Library",
-        "type": "fiction",
-        "available": true
-    },
-    {
-        "id": 6,
-        "name": "Viscount Who Loved Me",
-        "type": "fiction",
-        "available": true
-    },
-    {
-        "id": 2,
-        "name": "Just as I Am",
-        "type": "non-fiction",
-        "available": false
-    },
-    {
-        "id": 5,
-        "name": "Untamed",
-        "type": "non-fiction",
-        "available": true
-    }
-]
-Request URI:	https://simple-books-api.click:443/api-clients
-Respuesta: {"accessToken":"880207cf011d63e45caebe0cd3dc08b3af3d6fbb7844467e1121961e6356d219"}
-HTTP/1.1 200 OK
-Content-Type: application/json
-Content-Length: 417
-Connection: keep-alive
-Date: Thu, 26 Mar 2026 21:06:20 GMT
-X-Amzn-Trace-Id: Root=1-69c59fcc-24ef9eab07bb125e75b0b7d5;Parent=53154830c58a2c3b;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 14d46070-4614-409c-9fb7-c963e02637fd
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a2XoAE6FoAMEgJQ=
+x-amz-apigw-id: a43ovGtAIAMEqbg=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
 Via: 1.1 fa8b0effa6df576b1019d4a3c72e50c6.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: 3PyrUVeg7WloQnp-FpuC9sv0qmAtC3ztXSwiYOiKpQenFUWYlNnAIA==
+X-Amz-Cf-Id: 73y_tZLJgdcCmckyuz1aMxW8TcfXMKk-lptmqFmkuYAf1kLLupZl4w==
+
+[
+    {
+        "id": 1,
+        "name": "The Russian",
+        "type": "fiction",
+        "available": true
+    },
+    {
+        "id": 3,
+        "name": "The Vanishing Half",
+        "type": "fiction",
+        "available": true
+    },
+    {
+        "id": 4,
+        "name": "The Midnight Library",
+        "type": "fiction",
+        "available": true
+    },
+    {
+        "id": 6,
+        "name": "Viscount Who Loved Me",
+        "type": "fiction",
+        "available": true
+    },
+    {
+        "id": 2,
+        "name": "Just as I Am",
+        "type": "non-fiction",
+        "available": false
+    },
+    {
+        "id": 5,
+        "name": "Untamed",
+        "type": "non-fiction",
+        "available": true
+    }
+]
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 417
+Connection: keep-alive
+Date: Fri, 27 Mar 2026 15:18:43 GMT
+X-Amzn-Trace-Id: Root=1-69c69fd3-7e23132a4dd59f7c40948b12;Parent=7388acd5fec33a1f;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 4c386c0d-653f-4864-a53a-076261662727
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
+x-amz-apigw-id: a43pLFKVIAMEGYA=
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
+X-Cache: Miss from cloudfront
+Via: 1.1 9d599e6520e520abd2fb234fbff43d4e.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LIM50-P4
+X-Amz-Cf-Id: 9ZyvZBi-tlyuBilkekrZxiETxJ-t9oeKKvK2PkZa_Y1tCdLo-xl21w==
 
 [
     {
