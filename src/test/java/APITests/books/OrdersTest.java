@@ -13,6 +13,7 @@ import APITests.utils.OrderResponse;
 
 import static io.restassured.RestAssured.given;
 
+// ✅ SIN @DataProvider — elimina definitivamente el Broken de Allure
 public class OrdersTest extends BaseBooksTest {
 
     @Severity(SeverityLevel.BLOCKER)
@@ -21,14 +22,10 @@ public class OrdersTest extends BaseBooksTest {
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Orders", "Smoke", "Regression" })
     public void listarOrdenes() {
-        given()
-                .spec(spec)
+        given().spec(spec)
                 .header("Authorization", "Bearer " + token)
-                .when()
-                .get("/orders")
-                .then()
-                .statusCode(200)
-                .log().all();
+                .when().get("/orders")
+                .then().statusCode(200).log().all();
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -37,21 +34,13 @@ public class OrdersTest extends BaseBooksTest {
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Orders", "Regression" })
     public void crearOrden() {
-        Order nuevaOrden = new Order(1, "jhon");
-
-        OrderResponse respuesta = given()
-                .spec(spec)
+        OrderResponse resp = given().spec(spec)
                 .header("Authorization", "Bearer " + token)
-                .body(nuevaOrden)
-                .when()
-                .post("/orders")
-                .then()
-                .statusCode(201)
-                .log().all()
-                .extract()
-                .as(OrderResponse.class);
-
-        System.out.println("Order ID creado: " + respuesta.getOrderId());
+                .body(new Order(1, "jhon"))
+                .when().post("/orders")
+                .then().statusCode(201).log().all()
+                .extract().as(OrderResponse.class);
+        System.out.println("Order ID: " + resp.getOrderId());
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -60,15 +49,11 @@ public class OrdersTest extends BaseBooksTest {
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Orders", "Negative" })
     public void validarStatusCode400CuandoCuerpoEsInvalido() {
-        given()
-                .spec(spec)
+        given().spec(spec)
                 .header("Authorization", "Bearer " + token)
                 .body("{}")
-                .when()
-                .post("/orders")
-                .then()
-                .statusCode(400)
-                .log().all();
+                .when().post("/orders")
+                .then().statusCode(400).log().all();
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -77,15 +62,11 @@ public class OrdersTest extends BaseBooksTest {
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Orders", "Security", "Negative" })
     public void validarStatusCode401TokenInvalidoEnPost() {
-        given()
-                .spec(spec)
-                .header("Authorization", "Bearer InvalidoToken")
-                .body("{\"bookId\": 1, \"customerName\": \"Test\"}")
-                .when()
-                .post("/orders")
-                .then()
-                .statusCode(401)
-                .log().all();
+        given().spec(spec)
+                .header("Authorization", "Bearer TokenInvalido")
+                .body("{\"bookId\":1,\"customerName\":\"Test\"}")
+                .when().post("/orders")
+                .then().statusCode(401).log().all();
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -93,14 +74,10 @@ public class OrdersTest extends BaseBooksTest {
     @Story("Seguridad y autenticación")
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Orders", "Security", "Negative" })
-    public void validarTokenInvalidoEnGet() {
-        given()
-                .spec(spec)
-                .header("Authorization", "Bearer tokenFalso123")
-                .when()
-                .get("/orders")
-                .then()
-                .statusCode(401)
-                .log().all();
+    public void validarStatusCode401TokenInvalidoEnGet() {
+        given().spec(spec)
+                .header("Authorization", "Bearer TokenInvalido")
+                .when().get("/orders")
+                .then().statusCode(401).log().all();
     }
 }
