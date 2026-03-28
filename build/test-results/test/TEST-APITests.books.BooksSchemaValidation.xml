@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.books.BooksSchemaValidation" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-28T15:40:27.908Z" hostname="DESKTOP-IOAC1DS" time="11.619">
+<testsuite name="APITests.books.BooksSchemaValidation" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-28T15:55:40.544Z" hostname="DESKTOP-IOAC1DS" time="10.964">
   <properties/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="2.023"/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.387"/>
-  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.18"/>
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="1.773"/>
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.192"/>
+  <testcase name="validarSchemaDeBooksEsCorrecto" classname="APITests.books.BooksSchemaValidation" time="0.179"/>
   <system-out><![CDATA[Token intento 1 | status: 201
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 417
 Connection: keep-alive
-Date: Sat, 28 Mar 2026 15:40:31 GMT
-X-Amzn-Trace-Id: Root=1-69c7f66f-2a5329e0151c53ec2bdd2cd5;Parent=61db7c6531585dfe;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: aea24f88-1e78-46c2-979e-a37ab331f206
+Date: Sat, 28 Mar 2026 15:55:44 GMT
+X-Amzn-Trace-Id: Root=1-69c7fa00-37e3a02d7da1a7f46fdde3d8;Parent=4c4e8f4c7020fcb8;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 5cb3040d-0762-4ae5-a3fa-8cf5c1309af8
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a8NxgGxPIAMEMdw=
+x-amz-apigw-id: a8QAHHraoAMETPA=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 5b4019b3116ea3434f9c081893a525ea.cloudfront.net (CloudFront)
+Via: 1.1 c31c6ae424b45369dce4dac85318908a.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: Szpvgzlreq7DAYIViqlZIQq--s_5tgoU_ivNARxb5bDT7XGLtxqoFw==
+X-Amz-Cf-Id: HaW70U5lda8QDmRS7XAulRQQNtlMjyV05qjNTJ-0T7rGydOViGT1Lw==
 
 [
     {
@@ -64,17 +64,17 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 417
 Connection: keep-alive
-Date: Sat, 28 Mar 2026 15:40:40 GMT
-X-Amzn-Trace-Id: Root=1-69c7f678-3bfde73e2e5dfdc809c751ab;Parent=789d2408cc99ecf9;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: a1f370d4-26fc-4ac3-bd20-b154c070139f
+Date: Sat, 28 Mar 2026 15:55:52 GMT
+X-Amzn-Trace-Id: Root=1-69c7fa08-25a63b1b43ee9a9f1f9e6530;Parent=083a7f52840e2a46;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 40011ad9-1424-48d1-99e8-b1f195313ac7
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a8Ny4ESsIAMEl0g=
+x-amz-apigw-id: a8QBYFX4IAMEQNQ=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 4b41c6e76d8872ab0e8baee30184397a.cloudfront.net (CloudFront)
+Via: 1.1 646918d972593b8541919a1f9825d242.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: ynbuTfLPiM_DuTX7qMArAKz5hic79LdWj3XLYcXGyyhCfPQukGEMRg==
+X-Amz-Cf-Id: g7Sw1-GjMIraC5Iwr-QTVSu9_rQK0HxLhS4-6stPzkcRINmWAL4MIQ==
 
 [
     {
@@ -119,17 +119,17 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 417
 Connection: keep-alive
-Date: Sat, 28 Mar 2026 15:40:43 GMT
-X-Amzn-Trace-Id: Root=1-69c7f67b-0c68baed5283f1c8250e4bbf;Parent=74722a9dd9e7f0cc;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: c3c76933-e051-46a9-8179-3a9d1abb2e1f
+Date: Sat, 28 Mar 2026 15:55:55 GMT
+X-Amzn-Trace-Id: Root=1-69c7fa0b-361f5e65129793306fc90d76;Parent=72d34719175ef080;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 4d8a2c0c-ab67-4ba1-8a23-80bb69bf7a0a
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a8NzTEfboAMEjUw=
+x-amz-apigw-id: a8QByHkAIAMErtw=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 fa0531924d3bbc314378f5f0ddd1cdfc.cloudfront.net (CloudFront)
+Via: 1.1 eaa8527bd6db15317a1490e92fd0c428.cloudfront.net (CloudFront)
 X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: eCSSXlg-zwEvB48vBv-wleCSZOZonaM1uzttXCR7CBMTZlEp0LOaMA==
+X-Amz-Cf-Id: wwfKU_04KH2rEX_D_-lgXOVgtWXzDAAavMsERzby2Q0L1zO3a0Kndg==
 
 [
     {

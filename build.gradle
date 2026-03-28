@@ -58,9 +58,9 @@ def suiteMap = [
 def allureResultsDir = layout.buildDirectory.dir("allure-results").get().asFile
 
 tasks.named('test') {
-    doFirst {
-        delete allureResultsDir  // ← usa variable definida fuera
-    }
+   /* doFirst {
+        delete allureResultsDir  
+    }*/
 
     useTestNG() {
         def suite = System.getProperty("suite", "All")
