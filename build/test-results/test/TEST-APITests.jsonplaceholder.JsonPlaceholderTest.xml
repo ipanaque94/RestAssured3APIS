@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.jsonplaceholder.JsonPlaceholderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-03-28T15:55:42.779Z" hostname="DESKTOP-IOAC1DS" time="8.006">
+<testsuite name="APITests.jsonplaceholder.JsonPlaceholderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-03-28T16:19:37.775Z" hostname="DESKTOP-IOAC1DS" time="10.552">
   <properties/>
-  <testcase name="testGetPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.251"/>
+  <testcase name="testGetPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.269"/>
   <testcase name="testActualizarPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.36"/>
-  <testcase name="testCrearPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.375"/>
-  <testcase name="testEliminarPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.343"/>
-  <testcase name="testGetUserYValidarCampos" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.319"/>
-  <system-out><![CDATA[Name: Leanne Graham
-Username: Bret
-Email: Sincere@april.biz
-Lat: -37.3159
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <testcase name="testCrearPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.373"/>
+  <testcase name="testEliminarPost" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.351"/>
+  <testcase name="testGetUserYValidarCampos" classname="APITests.jsonplaceholder.JsonPlaceholderTest" time="0.267"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Iniciando test: testGetPost
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Test completado exitosamente
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Iniciando test: testActualizarPost
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Test completado exitosamente
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Iniciando test: testCrearPost
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Test completado exitosamente
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Iniciando test: testEliminarPost
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Test completado exitosamente
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Iniciando test: testGetUserYValidarCampos
+[Test worker] INFO APITests.jsonplaceholder.JsonPlaceholderTest - Test completado exitosamente
+]]></system-err>
 </testsuite>

@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.auth.AuthTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-28T15:55:38.368Z" hostname="DESKTOP-IOAC1DS" time="14.656">
+<testsuite name="APITests.auth.AuthTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-28T16:19:32.673Z" hostname="DESKTOP-IOAC1DS" time="18.797">
   <properties/>
-  <testcase name="registroExitosoRetorna201ConToken" classname="APITests.auth.AuthTest" time="0.513"/>
-  <testcase name="validarCuerpoVacioRetorna400" classname="APITests.auth.AuthTest" time="0.173"/>
-  <testcase name="validarSoloNombreRetorna400" classname="APITests.auth.AuthTest" time="0.169"/>
+  <testcase name="registroExitosoRetorna201ConToken" classname="APITests.auth.AuthTest" time="0.652"/>
+  <testcase name="validarCuerpoVacioRetorna400" classname="APITests.auth.AuthTest" time="0.319"/>
+  <testcase name="validarSoloNombreRetorna400" classname="APITests.auth.AuthTest" time="0.275"/>
   <system-out><![CDATA[Token intento 1 | status: 201
 HTTP/1.1 201 Created
 Content-Type: application/json
 Content-Length: 82
 Connection: keep-alive
-Date: Sat, 28 Mar 2026 15:55:42 GMT
-X-Amzn-Trace-Id: Root=1-69c7f9fe-16465469636947745a5e0742;Parent=10a85588ff2d5967;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 1f01eb38-9c3d-4620-ae1e-fa898a85e6c6
+Date: Sat, 28 Mar 2026 16:19:36 GMT
+X-Amzn-Trace-Id: Root=1-69c7ff98-668c79dd6fc356903c19a9f5;Parent=77a2ddd84c6d4dad;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: c0b17dde-1bb8-42e8-9ac7-d76c20a42517
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a8P_yEvOoAMEUZA=
+x-amz-apigw-id: a8Tf6GEKIAMEM_Q=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Miss from cloudfront
-Via: 1.1 646918d972593b8541919a1f9825d242.cloudfront.net (CloudFront)
-X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: 52bpgGm68TnWwSVOgnLx3snQt51oYx9CqkR9Iy5hVx7N6n14EK2N5Q==
+Via: 1.1 19730f0d78f5675aa7f2838252596968.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: MIA3-P2
+X-Amz-Cf-Id: M-jCPCtUKV0rG3hVB5kLBrFsHLy7HUlIw1OfQMZQqoDiFcg0DjcMyg==
 
 {
-    "accessToken": "8159e6b31eb29eb661fe71bfd0caea79c46672797e958cb9fd812ed37ba4f64a"
+    "accessToken": "4354f4c2df45998b712b427eec564192b35de5d9ec796a8ba9bc7a6e6f92a753"
 }
 Token intento 1 | status: 201
 HTTP/1.1 400 Bad Request
 Content-Type: application/json
 Content-Length: 43
 Connection: keep-alive
-Date: Sat, 28 Mar 2026 15:55:56 GMT
-X-Amzn-Trace-Id: Root=1-69c7fa0c-5b49361a25a9c185224742f6;Parent=010823e9159442cf;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 2a569493-6747-43d2-a2e1-ed78939cb118
+Date: Sat, 28 Mar 2026 16:19:54 GMT
+X-Amzn-Trace-Id: Root=1-69c7ffaa-356627f25ba9b9c650a5d568;Parent=15d04e237f4ca22a;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: 8c00c251-6844-46a4-ac53-27585c41519a
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a8QB_Gj9IAMEB3g=
+x-amz-apigw-id: a8TivEPbIAMEcbQ=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 4b41c6e76d8872ab0e8baee30184397a.cloudfront.net (CloudFront)
-X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: ROKlkyAnbudMbsTvUIkF68TGh33XdCqoxh5XlM_WJ3SFsHRmGniCPQ==
+Via: 1.1 375c695e49c84df5ace39057e6134b40.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: MIA3-P2
+X-Amz-Cf-Id: 5YjrMjeGD2OMlpLserZoc_zB9QELMQ9w2GYY_-lAuGw1uheled_U5A==
 
 {
     "error": "Invalid or missing client name."
@@ -48,21 +48,27 @@ HTTP/1.1 400 Bad Request
 Content-Type: application/json
 Content-Length: 44
 Connection: keep-alive
-Date: Sat, 28 Mar 2026 15:55:56 GMT
-X-Amzn-Trace-Id: Root=1-69c7fa0c-25504b3d722e773b5263cfd3;Parent=4b0f0ae216ed7b23;Sampled=0;Lineage=1:9ee0f5ed:0
-x-amzn-RequestId: 9b6405c1-2ef9-4f58-bc0b-2f3c81e3b0f9
+Date: Sat, 28 Mar 2026 16:19:55 GMT
+X-Amzn-Trace-Id: Root=1-69c7ffab-10defe6e3b53d6570c6e21e3;Parent=11d98be2293aea6f;Sampled=0;Lineage=1:9ee0f5ed:0
+x-amzn-RequestId: f046f65a-2d8c-4719-8ccc-04c2d829e0fb
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token
-x-amz-apigw-id: a8QCCEB7oAMEPFw=
+x-amz-apigw-id: a8TiyHQCoAMEI2g=
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
 X-Cache: Error from cloudfront
-Via: 1.1 02da0622fc639c3985f7c9f3ff85f160.cloudfront.net (CloudFront)
-X-Amz-Cf-Pop: LIM50-P4
-X-Amz-Cf-Id: eoZcaWdlT-c71suR-Uu7x0IydbIqOzscmoTkKQB03cjLsfm5_b3cRg==
+Via: 1.1 901ab2286f37b97cae8e703e2e582a98.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: MIA3-P2
+X-Amz-Cf-Id: lCJoe2OXLdvDHAZqIkyLmqkyq9oroBsU6fO2THglwfV3ydp9DZ_8KQ==
 
 {
     "error": "Invalid or missing client email."
 }
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[[Test worker] INFO APITests.auth.AuthTest - Iniciando test: registroExitosoRetorna201ConToken
+[Test worker] INFO APITests.auth.AuthTest - Test completado exitosamente
+[Test worker] INFO APITests.auth.AuthTest - Iniciando test: validarCuerpoVacioRetorna400
+[Test worker] INFO APITests.auth.AuthTest - Test completado exitosamente
+[Test worker] INFO APITests.auth.AuthTest - Iniciando test: validarSoloNombreRetorna400
+[Test worker] INFO APITests.auth.AuthTest - Test completado exitosamente
+]]></system-err>
 </testsuite>

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.rickandmorty.RickAndMortyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-03-28T15:55:42.371Z" hostname="DESKTOP-IOAC1DS" time="6.782">
+<testsuite name="APITests.rickandmorty.RickAndMortyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-03-28T16:19:37.174Z" hostname="DESKTOP-IOAC1DS" time="9.592">
   <properties/>
-  <testcase name="testGetPersonajeRick" classname="APITests.rickandmorty.RickAndMortyTest" time="0.377"/>
-  <testcase name="testValidarCamposAnidadosConJsonPath" classname="APITests.rickandmorty.RickAndMortyTest" time="0.253"/>
+  <testcase name="testGetPersonajeRick" classname="APITests.rickandmorty.RickAndMortyTest" time="0.547"/>
+  <testcase name="testValidarCamposAnidadosConJsonPath" classname="APITests.rickandmorty.RickAndMortyTest" time="0.259"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[[Test worker] INFO APITests.rickandmorty.RickAndMortyTest - Iniciando test: testGetPersonajeRick
+[Test worker] INFO APITests.rickandmorty.RickAndMortyTest - Test completado exitosamente
+[Test worker] INFO APITests.rickandmorty.RickAndMortyTest - Iniciando test: testValidarCamposAnidadosConJsonPath
+[Test worker] INFO APITests.rickandmorty.RickAndMortyTest - Test completado exitosamente
+]]></system-err>
 </testsuite>
