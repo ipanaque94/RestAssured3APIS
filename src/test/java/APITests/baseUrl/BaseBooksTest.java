@@ -12,7 +12,12 @@ public class BaseBooksTest {
     protected String token = "";
     protected RequestSpecification spec;
 
-    @BeforeClass(alwaysRun = true, groups = { "Books", "Orders", "Auth" })
+    @BeforeClass(alwaysRun = true, groups = {
+            "Books", "Orders", "Auth",
+            "Smoke", "Regression", "Negative",
+            "Security", "Contract", "Idempotencia",
+            "Performance"
+    })
     public void setup() {
         RestAssured.baseURI = Config.get("books.api.url");
         RestAssured.useRelaxedHTTPSValidation();

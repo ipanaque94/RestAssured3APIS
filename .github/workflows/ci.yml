@@ -49,8 +49,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Smoke
-        continue-on-error: true
-        run: ./gradlew test -Dsuite=Smoke --continue
+        run: ./gradlew clean test -Dsuite=Smoke --continue
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -76,8 +75,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Regression
-        continue-on-error: true
-        run: ./gradlew test -Dsuite=Regression --continue
+        run: ./gradlew clean test -Dsuite=Regression --continue
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -103,8 +101,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Contract
-        continue-on-error: true
-        run: ./gradlew test -Dsuite=Contract --continue
+        run: ./gradlew clean test -Dsuite=Contract --continue
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -130,8 +127,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Security
-        continue-on-error: true
-        run: ./gradlew test -Dsuite=Security --continue
+        run: ./gradlew clean test -Dsuite=Security --continue
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -157,8 +153,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Negative
-        continue-on-error: true
-        run: ./gradlew test -Dsuite=Negative --continue
+        run: ./gradlew clean test -Dsuite=Negative --continue
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -184,8 +179,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar SOAP
-        continue-on-error: true
-        run: ./gradlew test -Dsuite=SOAP --continue
+        run: ./gradlew clean test -Dsuite=SOAP --continue
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -211,8 +205,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Idempotencia
-        continue-on-error: true
-        run: ./gradlew test -Dsuite=Idempotencia --continue
+        run: ./gradlew clean test -Dsuite=Idempotencia --continue
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -238,8 +231,7 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - name: Ejecutar Performance
-        continue-on-error: true
-        run: ./gradlew test -Dsuite=Performance --continue
+        run: ./gradlew clean test -Dsuite=Performance --continue
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -275,9 +267,6 @@ jobs:
           wget -q "https://github.com/allure-framework/allure2/releases/download/${{ env.ALLURE_VERSION }}/allure-${{ env.ALLURE_VERSION }}.tgz"
           tar -xzf "allure-${{ env.ALLURE_VERSION }}.tgz"
           "./allure-${{ env.ALLURE_VERSION }}/bin/allure" generate allure-results -o allure-report --clean
-
-          # Crear index.html con metadata
-          echo '<html><head><meta http-equiv="refresh" content="0;url=./index.html"></head></html>' > allure-report/redirect.html
 
       - name: Publicar en GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
