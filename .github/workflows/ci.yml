@@ -48,8 +48,19 @@ jobs:
           distribution: temurin
           cache: gradle
       - run: chmod +x gradlew
-      - name: Ejecutar Smoke
-        run: ./gradlew clean test -Dsuite=Smoke --continue
+      - run: ./gradlew clean test -Dsuite=Smoke --continue
+      - name: Allure metadata
+        if: always()
+        run: |
+          mkdir -p build/allure-results
+          cat > build/allure-results/environment.properties << 'PROPS'
+          Books.API=https://simple-books-api.glitch.me
+          RickAndMorty.API=https://rickandmortyapi.com/api
+          JsonPlaceholder.API=https://jsonplaceholder.typicode.com
+          SOAP.API=https://www.dataaccess.com
+          Java.Version=17
+          Framework=RestAssured + TestNG
+          PROPS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -74,8 +85,19 @@ jobs:
           distribution: temurin
           cache: gradle
       - run: chmod +x gradlew
-      - name: Ejecutar Regression
-        run: ./gradlew clean test -Dsuite=Regression --continue
+      - run: ./gradlew clean test -Dsuite=Regression --continue
+      - name: Allure metadata
+        if: always()
+        run: |
+          mkdir -p build/allure-results
+          cat > build/allure-results/environment.properties << 'PROPS'
+          Books.API=https://simple-books-api.glitch.me
+          RickAndMorty.API=https://rickandmortyapi.com/api
+          JsonPlaceholder.API=https://jsonplaceholder.typicode.com
+          SOAP.API=https://www.dataaccess.com
+          Java.Version=17
+          Framework=RestAssured + TestNG
+          PROPS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -100,8 +122,16 @@ jobs:
           distribution: temurin
           cache: gradle
       - run: chmod +x gradlew
-      - name: Ejecutar Contract
-        run: ./gradlew clean test -Dsuite=Contract --continue
+      - run: ./gradlew clean test -Dsuite=Contract --continue
+      - name: Allure metadata
+        if: always()
+        run: |
+          mkdir -p build/allure-results
+          cat > build/allure-results/environment.properties << 'PROPS'
+          Books.API=https://simple-books-api.glitch.me
+          Java.Version=17
+          Framework=RestAssured + TestNG
+          PROPS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -126,8 +156,16 @@ jobs:
           distribution: temurin
           cache: gradle
       - run: chmod +x gradlew
-      - name: Ejecutar Security
-        run: ./gradlew clean test -Dsuite=Security --continue
+      - run: ./gradlew clean test -Dsuite=Security --continue
+      - name: Allure metadata
+        if: always()
+        run: |
+          mkdir -p build/allure-results
+          cat > build/allure-results/environment.properties << 'PROPS'
+          Books.API=https://simple-books-api.glitch.me
+          Java.Version=17
+          Framework=RestAssured + TestNG
+          PROPS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -152,8 +190,16 @@ jobs:
           distribution: temurin
           cache: gradle
       - run: chmod +x gradlew
-      - name: Ejecutar Negative
-        run: ./gradlew clean test -Dsuite=Negative --continue
+      - run: ./gradlew clean test -Dsuite=Negative --continue
+      - name: Allure metadata
+        if: always()
+        run: |
+          mkdir -p build/allure-results
+          cat > build/allure-results/environment.properties << 'PROPS'
+          Books.API=https://simple-books-api.glitch.me
+          Java.Version=17
+          Framework=RestAssured + TestNG
+          PROPS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -178,8 +224,16 @@ jobs:
           distribution: temurin
           cache: gradle
       - run: chmod +x gradlew
-      - name: Ejecutar SOAP
-        run: ./gradlew clean test -Dsuite=SOAP --continue
+      - run: ./gradlew clean test -Dsuite=SOAP --continue
+      - name: Allure metadata
+        if: always()
+        run: |
+          mkdir -p build/allure-results
+          cat > build/allure-results/environment.properties << 'PROPS'
+          SOAP.API=https://www.dataaccess.com
+          Java.Version=17
+          Framework=RestAssured + TestNG
+          PROPS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -204,8 +258,16 @@ jobs:
           distribution: temurin
           cache: gradle
       - run: chmod +x gradlew
-      - name: Ejecutar Idempotencia
-        run: ./gradlew clean test -Dsuite=Idempotencia --continue
+      - run: ./gradlew clean test -Dsuite=Idempotencia --continue
+      - name: Allure metadata
+        if: always()
+        run: |
+          mkdir -p build/allure-results
+          cat > build/allure-results/environment.properties << 'PROPS'
+          Books.API=https://simple-books-api.glitch.me
+          Java.Version=17
+          Framework=RestAssured + TestNG
+          PROPS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -230,8 +292,16 @@ jobs:
           distribution: temurin
           cache: gradle
       - run: chmod +x gradlew
-      - name: Ejecutar Performance
-        run: ./gradlew clean test -Dsuite=Performance --continue
+      - run: ./gradlew clean test -Dsuite=Performance --continue
+      - name: Allure metadata
+        if: always()
+        run: |
+          mkdir -p build/allure-results
+          cat > build/allure-results/environment.properties << 'PROPS'
+          Books.API=https://simple-books-api.glitch.me
+          Java.Version=17
+          Framework=RestAssured + TestNG
+          PROPS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
