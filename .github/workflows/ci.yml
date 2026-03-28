@@ -337,6 +337,8 @@ jobs:
           wget -q "https://github.com/allure-framework/allure2/releases/download/${{ env.ALLURE_VERSION }}/allure-${{ env.ALLURE_VERSION }}.tgz"
           tar -xzf "allure-${{ env.ALLURE_VERSION }}.tgz"
           "./allure-${{ env.ALLURE_VERSION }}/bin/allure" generate allure-results -o allure-report --clean
+          echo "Build: $(date '+%Y-%m-%d %H:%M:%S')" > allure-report/build-info.txt
+          echo "Commit: ${{ github.sha }}" >> allure-report/build-info.txt
 
       - name: Publicar en GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -345,6 +347,8 @@ jobs:
           publish_dir: ./allure-report
           publish_branch: gh-pages
           force_orphan: true
+          enable_jekyll: false
+          cname: ""
 
       - name: Comentar URL del reporte
         if: github.event_name == 'pull_request'
