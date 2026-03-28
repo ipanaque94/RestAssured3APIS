@@ -1,6 +1,6 @@
-# REST Assured API Testing Framework
+# REST Assured API Testing 
 
-Framework profesional de automatización de pruebas de API construido con Java + Rest Assured + TestNG + Allure.
+ Suite de automatización de pruebas de API construido con Java + Rest Assured + TestNG + Allure.
 
 ## 🔧 Stack técnico
 
@@ -62,5 +62,5 @@ El pipeline de GitHub Actions corre automáticamente en cada push:
 
 ## 📚 Curso base
 
-Esta Suite de test fue construido sobre los conocimientos adquiridos en el curso
+Esta Suite de API testing fue construido sobre los conocimientos adquiridos en el curso
 **REST Assured Avanzado** de [Free Range Testers](https://www.freerangetesters.com) en Udemy
