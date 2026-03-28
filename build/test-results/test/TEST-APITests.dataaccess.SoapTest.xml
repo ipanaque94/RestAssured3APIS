@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.dataaccess.SoapTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-03-27T21:16:17.249Z" hostname="DESKTOP-IOAC1DS" time="16.097">
+<testsuite name="APITests.dataaccess.SoapTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-03-28T14:24:57.791Z" hostname="DESKTOP-IOAC1DS" time="17.113">
   <properties/>
-  <testcase name="testNumeroApalabras500" classname="APITests.dataaccess.SoapTest" time="1.591"/>
-  <testcase name="testNumeroApalabras500" classname="APITests.dataaccess.SoapTest" time="0.597"/>
+  <testcase name="testNumeroApalabras500" classname="APITests.dataaccess.SoapTest" time="1.241"/>
+  <testcase name="testNumeroApalabras500" classname="APITests.dataaccess.SoapTest" time="0.587"/>
   <system-out><![CDATA[Status: 200
 Body: <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">

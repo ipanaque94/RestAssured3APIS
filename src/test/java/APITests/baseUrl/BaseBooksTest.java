@@ -1,7 +1,6 @@
 package APITests.baseUrl;
 
 import static io.restassured.RestAssured.given;
-//import java.util.Random;
 import org.testng.annotations.BeforeClass;
 import APITests.utils.Config;
 import io.restassured.RestAssured;
@@ -10,51 +9,46 @@ import io.restassured.specification.RequestSpecification;
 
 public class BaseBooksTest {
 
-    protected static String token;
-
-    protected static RequestSpecification spec;
-
-    private static boolean initialized = false;
+    protected String token = "";
+    protected RequestSpecification spec;
 
     @BeforeClass(alwaysRun = true)
-    public synchronized void setup() {
-        if (!initialized) {
-            RestAssured.baseURI = Config.get("books.api.url");
-            RestAssured.useRelaxedHTTPSValidation();
+    public void setup() {
+        RestAssured.baseURI = Config.get("books.api.url");
+        RestAssured.useRelaxedHTTPSValidation();
 
-            spec = new RequestSpecBuilder()
-                    .addHeader("Content-Type", "application/json")
-                    .addHeader("Accept", "application/json")
-                    .build();
+        spec = new RequestSpecBuilder()
+                .addHeader("Content-Type", "application/json")
+                .addHeader("Accept", "application/json")
+                .build();
 
+        try {
             token = obtenerToken();
-            initialized = true;
+        } catch (Exception e) {
+            System.out.println("⚠️ Token no disponible: " + e.getMessage());
         }
     }
 
     private String obtenerToken() {
         for (int i = 0; i < 3; i++) {
-
+            String email = generateRandomEmail();
             var response = given()
                     .spec(spec)
-                    .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + generateRandomEmail() + "\"}")
+                    .body("{\"clientName\": \"Enoc\", \"clientEmail\": \"" + email + "\"}")
                     .when()
                     .post("/api-clients");
 
-            System.out.println("obtenerToken intento " + (i + 1)
-                    + " | status: " + response.statusCode()
-                    + " | body: " + response.asString());
+            System.out.println("Token intento " + (i + 1) + " | status: " + response.statusCode());
 
             if (response.statusCode() == 201) {
                 return response.path("accessToken");
             }
-            // Pausa entre intentos para evitar rate limit
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ignored) {
             }
         }
-        throw new RuntimeException("No se pudo obtener token después de 3 intentos");
+        throw new RuntimeException("No se pudo obtener token");
     }
 
     protected String generateRandomEmail() {

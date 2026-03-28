@@ -6,14 +6,12 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-
 import APITests.baseUrl.BaseBooksTest;
 import APITests.utils.Order;
 import APITests.utils.OrderResponse;
 
 import static io.restassured.RestAssured.given;
 
-// ✅ SIN @DataProvider — elimina definitivamente el Broken de Allure
 public class OrdersTest extends BaseBooksTest {
 
     @Severity(SeverityLevel.BLOCKER)

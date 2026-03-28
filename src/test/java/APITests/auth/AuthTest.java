@@ -32,19 +32,18 @@ public class AuthTest extends BaseBooksTest {
                 .log().all();
     }
 
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @Description("POST /api-clients solo con clientName debe retornar 400 por email faltante")
     @Story("Validación de campos obligatorios")
     @Owner("Enoc Ipanaque")
     @Test(groups = { "Auth", "Negative" })
     public void validarSoloNombreRetorna400() {
         given()
-                .header("Content-Type", "application/json")
+                .spec(spec)
                 .body("{\"clientName\": \"Postman\"}")
                 .when()
                 .post("/api-clients")
                 .then()
-                .assertThat()
                 .statusCode(400)
                 .body("error", equalTo("Invalid or missing client email."))
                 .log().all();
