@@ -1,1 +1,0 @@
-{"uuid":"5c915cbf-c698-47e3-87a4-40c1082b4028","name":"APITests.rickandmorty.RickAndMortyTest","children":["ba8ce9b6-7187-4ac8-abc1-439c6a99bdf4"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1774636985798,"stop":1774636985799}],"afters":[],"start":1774636974195,"stop":1774636989141}

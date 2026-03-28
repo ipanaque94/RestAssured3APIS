@@ -12,7 +12,7 @@ public class BaseBooksTest {
     protected String token = "";
     protected RequestSpecification spec;
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeClass(alwaysRun = true, groups = { "Books", "Orders", "Auth" })
     public void setup() {
         RestAssured.baseURI = Config.get("books.api.url");
         RestAssured.useRelaxedHTTPSValidation();
@@ -25,7 +25,7 @@ public class BaseBooksTest {
         try {
             token = obtenerToken();
         } catch (Exception e) {
-            System.out.println("⚠️ Token no disponible: " + e.getMessage());
+            System.out.println("WARNING: Token no disponible: " + e.getMessage());
         }
     }
 

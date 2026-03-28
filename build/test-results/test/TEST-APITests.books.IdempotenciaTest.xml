@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITests.books.IdempotenciaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-28T14:25:03.811Z" hostname="DESKTOP-IOAC1DS" time="9.801">
+<testsuite name="APITests.books.IdempotenciaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-28T14:59:13.900Z" hostname="DESKTOP-IOAC1DS" time="12.199">
   <properties/>
-  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.8"/>
-  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.837"/>
-  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.803"/>
-  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.573"/>
+  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.928"/>
+  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.864"/>
+  <testcase name="validarIdempotenciaDELETE" classname="APITests.books.IdempotenciaTest" time="0.946"/>
+  <testcase name="validarIdempotenciaPATCH" classname="APITests.books.IdempotenciaTest" time="0.899"/>
   <system-out><![CDATA[Token intento 1 | status: 201
-Order creada para DELETE: paWtzby6ItBt68qo1q0CX
-Order creada para PATCH: 9cHmTLJGLrjZE1ECHC83J
+Order creada para DELETE: R7VANXKCut3WyQ6X98k7q
+Order creada para PATCH: ALIAw3mBkXXk3jrfF1DUO
 Token intento 1 | status: 201
-Order creada para DELETE: p6RhI1ejbt8fxvVaZfV4w
-Order creada para PATCH: IUl1PCLNHIZtqO7WhE85B
+Order creada para DELETE: 8GOtnW-CMZ9AdP4bL8N5l
+Order creada para PATCH: g8xyt950K8o3AhD9x3SGj
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

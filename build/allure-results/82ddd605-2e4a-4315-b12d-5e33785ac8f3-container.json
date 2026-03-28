@@ -1,1 +1,0 @@
-{"uuid":"82ddd605-2e4a-4315-b12d-5e33785ac8f3","name":"APITests.jsonplaceholder.JsonPlaceholderTest","children":["07c64f6a-682b-406a-b46d-93919b8713a2"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1774557279989,"stop":1774557279990}],"afters":[],"start":1774557268803,"stop":1774557281212}

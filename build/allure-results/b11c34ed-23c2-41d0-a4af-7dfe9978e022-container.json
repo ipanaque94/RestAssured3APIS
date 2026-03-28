@@ -1,1 +1,0 @@
-{"uuid":"b11c34ed-23c2-41d0-a4af-7dfe9978e022","name":"APITests.books.BooksSchemaValidation","children":["97d5ba2c-046e-4101-825e-f6f4b530a94f"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1774646173923,"stop":1774646173923}],"afters":[],"start":1774646164491,"stop":1774646178996}
