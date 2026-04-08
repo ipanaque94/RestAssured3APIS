@@ -145,10 +145,6 @@ Más allá del código, este proyecto me enseñó cosas que no están en los tut
 
 - El `@BeforeClass` sin `alwaysRun = true` se salta cuando TestNG corre grupos específicos,
   dejando el `spec` nulo y fallando con un error confuso de "Specification cannot be null"
-- `simple-books-api.click` está bloqueado por los runners de GitHub Actions — tuve que
-  cambiar a `simple-books-api.glitch.me`, que es la misma API en un host diferente
-- El `doFirst { delete }` de Gradle 9 es incompatible con el configuration cache —
-  la solución es usar `./gradlew clean test` en lugar de borrar el directorio manualmente
 - Los headers duplicados entre el `spec` y el `given()` pueden causar errores 400
   silenciosos en algunas APIs
 
