@@ -50,42 +50,6 @@ tienen servicios legacy con ese protocolo.
 
 ---
 
-## Estructura del proyecto
-
-```
-src/test/java/APITests/
-├── auth/              → Registro de clientes y obtención de token
-├── books/             → CRUD de libros y órdenes (Simple Books API)
-│   ├── BooksTest.java
-│   ├── OrdersTest.java
-│   ├── BooksSchemaValidation.java
-│   └── IdempotenciaTest.java
-├── rickandmorty/      → Validación de personajes
-├── jsonplaceholder/   → Operaciones CRUD
-├── dataaccess/        → Servicio SOAP
-├── baseUrl/           → Clases base reutilizables (una por API)
-└── utils/
-    ├── Config.java    → Lee URLs desde env vars, -D flags o config.properties
-    ├── Order.java
-    └── OrderResponse.java
-
-src/test/resources/
-├── TestNG.xml                  → Suite completa
-├── TestngSmoke.xml
-├── TestngRegression.xml
-├── TestngContract.xml
-├── TestngSecurity.xml
-├── TestngNegative.xml
-├── TestngIdempotencia.xml
-├── TestngPerformance.xml
-├── TestsngSoap.xml
-├── config.properties
-└── schemas/
-    └── books-schemas.json      → Schema JSON para Contract Testing
-```
-
----
-
 ## Suites de prueba
 
 Cada suite tiene un propósito claro y corre de forma independiente:
