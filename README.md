@@ -27,7 +27,7 @@ ningún tutorial.
 
 | API | Tipo | Por qué la elegí |
 |---|---|---|
-| Simple Books API | REST + Auth | Es la única con autenticación real con tokens, lo que permite cubrir seguridad, flujos autenticados y manejo de errores de autorización |
+| Simple Books API | REST + Auth | Es la única que encontre por el momento con autenticación real con tokens, lo que permite cubrir seguridad, flujos autenticados y manejo de errores de autorización |
 | Rick and Morty API | REST público | Tiene respuestas con objetos anidados, ideal para practicar JsonPath en campos como `location.name` y `origin.url` |
 | JSONPlaceholder | REST público | API simple y estable, perfecta para cubrir el ciclo completo: GET, POST, PUT, DELETE sin complicaciones de autenticación |
 | DataAccess | SOAP/XML | Muchas empresas todavía tienen servicios legacy con SOAP. Quería entender cómo difiere de REST en headers, body y manejo de respuesta |
@@ -36,16 +36,11 @@ ningún tutorial.
 
 ## Análisis de casos de prueba por suite
 
-Aquí está el razonamiento detrás de cada suite. El código sin esta explicación es solo
-sintaxis; lo importante es el **por qué** de cada decisión de prueba.
-
 ### Smoke — "¿El sistema responde?"
 
 El propósito del Smoke no es encontrar bugs profundos sino confirmar que después de un
 deploy el sistema está vivo. Por eso solo incluye el test más representativo de cada API.
 
-Criterio de diseño: si el Smoke falla, no tiene sentido correr el resto. Por eso en el
-pipeline CI los demás jobs dependen de que Smoke termine.
 
 ### Regression — "¿Sigue funcionando todo lo que funcionaba antes?"
 
@@ -218,24 +213,12 @@ Las URLs de las APIs se configuran como secrets en GitHub para no exponerlas en 
 
 ---
 
-## Lo que todavía quiero mejorar
-
-Ser honesto sobre lo que falta es parte de aprender:
-
-- Agregar tests de integración que encadenen múltiples endpoints (crear orden → verificar
-  que aparece en GET /orders → eliminarla → verificar que da 404)
-- Implementar retry automático en tests que dependen de APIs con rate limiting
-- Agregar validación de headers de respuesta, no solo del body
-- Cubrir paginación en la Rick and Morty API
-
----
-
 ## Autor
 
 **Enoc Ipanaque** — Lima, Perú
 
 QA Automation Engineer en formación. Este proyecto lo construí mientras completaba el
 curso de REST Assured Avanzado de [Free Range Testers](https://www.freerangetesters.com)
-y preparaba la certificación ISTQB Foundation Level.
+y me preparaba leyendo la documentación para la certificación ISTQB Foundation Level.
 
 [LinkedIn](https://www.linkedin.com/in/enoc-isaac-ipanaque-rodas-b3729a283) · [GitHub](https://github.com/ipanaque94)
